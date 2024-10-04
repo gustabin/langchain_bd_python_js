@@ -16,7 +16,7 @@ Para instalar las dependencias del proyecto, asegúrate de tener [Python](https:
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu_usuario/nombre_del_repositorio.git
+    git clone https://github.com/gustabin/langchain_bd_python_js.git
     cd nombre_del_repositorio
     ```
 
@@ -35,7 +35,15 @@ Para instalar las dependencias del proyecto, asegúrate de tener [Python](https:
 ## Uso
 
 1. Asegúrate de tener tu archivo de base de datos `inventario.db` en la carpeta `datasources/`.
-2. Crea un archivo `.env` en la raíz del proyecto si es necesario para tus variables de entorno.
+2. Crea un archivo `.env` en la raíz del proyecto. Este archivo debe contener las variables de entorno necesarias para tu aplicación. A continuación, se muestra un ejemplo de cómo debe lucir tu archivo `.env`:
+
+    ```env
+    # Variables de entorno
+    OPENAI_API_KEY=tu_clave_api_aqui
+    ```
+
+   Asegúrate de reemplazar `tu_clave_api_aqui` con tu clave de API de OpenAI.
+
 3. Inicia la aplicación:
     ```bash
     python app.py

@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Define el lenguaje del documento como español -->
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura el viewport para responsividad -->
+
+    <!-- Define el favicon de la página, que se muestra en la pestaña del navegador -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <!-- Enlaza la hoja de estilos CSS externa -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Consulta a la Base de Datos</title>
+
+    <title>Consulta a la Base de Datos</title> <!-- Título de la página que aparece en la pestaña del navegador -->
 </head>
 
 <body>
-    <div class="container">
-        <h1>Consulta a la Base de Datos</h1>
+    <div class="container"> <!-- Contenedor principal que agrupa los elementos -->
+        <h1>Consulta a la Base de Datos</h1> <!-- Título principal de la página -->
+
+        <!-- Área de texto donde el usuario puede escribir su consulta -->
         <textarea id="query" placeholder="Escribe tu consulta aquí..."></textarea>
+
+        <!-- Botón que envía la consulta al servidor -->
         <button id="submit">Enviar Consulta</button>
-        <h2>Resultado:</h2>
+
+        <h2>Resultado:</h2> <!-- Subtítulo para la sección de resultados -->
+
+        <!-- Área donde se mostrará el resultado de la consulta -->
         <pre id="result"></pre>
     </div>
+
+    <!-- Enlaza el archivo JavaScript externo para manejar la lógica del lado del cliente -->
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 
