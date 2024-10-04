@@ -1,0 +1,5 @@
+# Ignorar el entorno virtual
+env/
+
+# Ignorar archivos de entorno
+.env

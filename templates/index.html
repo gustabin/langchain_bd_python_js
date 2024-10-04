@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Consulta a la Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Consulta a la Base de Datos</h1>
+        <textarea id="query" placeholder="Escribe tu consulta aquí..."></textarea>
+        <button id="submit">Enviar Consulta</button>
+        <h2>Resultado:</h2>
+        <pre id="result"></pre>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
