@@ -16,7 +16,7 @@ Para instalar las dependencias del proyecto, asegúrate de tener [Python](https:
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu_usuario/nombre_del_repositorio.git
+    git clone https://github.com/gustabin/langchain_bd_python_js.git
     cd nombre_del_repositorio
     ```
 
