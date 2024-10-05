@@ -3,3 +3,7 @@ env/
 
 # Ignorar archivos de entorno
 .env
+
+
+# Ignorar la documentacion
+doc/
