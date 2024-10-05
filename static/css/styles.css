@@ -59,6 +59,19 @@ pre {
     max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
 }
 
+#preguntasDemo {
+    white-space: pre-wrap; /* Permite que el texto se ajuste automáticamente */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan y se muestren en la siguiente línea */
+    overflow: auto; /* Agrega un scroll si el contenido excede el tamaño del contenedor */
+    max-height: 300px; /* Altura máxima del contenedor */
+    border: 1px solid #ccc; /* Borde para mejorar la visibilidad */
+    padding: 5px; /* Espacio interno reducido para evitar una gran sangría */
+    background-color: #f9f9f9; /* Color de fondo opcional */
+    margin-top: 10px; /* Espacio superior opcional */
+    text-indent: 0; /* Elimina la sangría de las líneas */
+}
+
+
 /* Estilo para las tablas */
 table {
     width: 100%; /* La tabla ocupa el 100% del contenedor */
