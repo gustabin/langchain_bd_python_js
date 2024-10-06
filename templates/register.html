@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <!-- Agregar Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .flashes {
+            margin-bottom: 20px;
+        }
+
+        .flashes li {
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .flashes .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .flashes .danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Registro de Usuario</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="{{ url_for('register') }}">
+            {{ form.hidden_tag() }} <!-- Para CSRF protection -->
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.name.label(class="form-label") }}
+                    {{ form.name(class="form-control") }}
+                    {% for error in form.name.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-6">
+                    {{ form.email.label(class="form-label") }}
+                    {{ form.email(class="form-control") }}
+                    {% for error in form.email.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.password.label(class="form-label") }}
+                    {{ form.password(class="form-control") }}
+                    {% for error in form.password.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-6">
+                    {{ form.website.label(class="form-label") }}
+                    {{ form.website(class="form-control") }}
+                    {% for error in form.website.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    {{ form.hostDB.label(class="form-label") }}
+                    {{ form.hostDB(class="form-control") }}
+                    {% for error in form.hostDB.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.userDB.label(class="form-label") }}
+                    {{ form.userDB(class="form-control") }}
+                    {% for error in form.userDB.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.passwordDB.label(class="form-label") }}
+                    {{ form.passwordDB(class="form-control") }}
+                    {% for error in form.passwordDB.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.databaseDB.label(class="form-label") }}
+                    {{ form.databaseDB(class="form-control") }}
+                    {% for error in form.databaseDB.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    {{ form.ssl_enabled.label(class="form-label") }}
+                    <div>
+                        {{ form.ssl_enabled(class="form-control") }}
+                    </div>
+                    {% for error in form.ssl_enabled.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.db_type.label(class="form-label") }}
+                    {{ form.db_type(class="form-control") }}
+                    {% for error in form.db_type.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.port.label(class="form-label") }}
+                    {{ form.port(class="form-control") }}
+                    {% for error in form.port.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group col-md-3">
+                    {{ form.charset.label(class="form-label") }}
+                    {{ form.charset(class="form-control") }}
+                    {% for error in form.charset.errors %}
+                    <span class="text-danger">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+
+    <!-- Agregar Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
