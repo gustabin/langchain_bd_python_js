@@ -93,7 +93,8 @@
         userInput.value = ''; // Limpia el campo de entrada
 
         // Enviar el mensaje al servidor
-        const response = await fetch('http://127.0.0.1:5010/chat', {
+        // const response = await fetch('http://127.0.0.1:5010/chat', {
+        const response = await fetch('https://echodb-rlca.onrender.com/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
