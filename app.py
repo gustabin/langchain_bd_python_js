@@ -1,9 +1,11 @@
-# Importar las librerías necesarias de LangChain y Flask
-from langchain.prompts import PromptTemplate  # Para crear plantillas de prompts
 # Para manejar la aplicación web
 from flask import render_template, Flask, request, jsonify
+# Para manejar el CORS
+from flask_cors import CORS
 # Para cargar variables de entorno desde un archivo .env
 from dotenv import load_dotenv
+# Importar las librerías necesarias de LangChain y Flask
+from langchain.prompts import PromptTemplate  # Para crear plantillas de prompts
 # Para manejar la conexión a la base de datos
 from langchain_community.utilities import SQLDatabase
 # Para configurar el modelo de lenguaje OpenAI
@@ -16,6 +18,14 @@ load_dotenv()
 
 # Crear una instancia de la aplicación Flask
 app = Flask(__name__)
+
+# CORS(app)
+# Habilitar CORS para la aplicación Flask
+CORS(app, resources={r"/chat": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],  # Asegúrate de incluir todos los orígenes necesarios
+    "methods": ["GET", "POST", "OPTIONS"],  # Incluye OPTIONS para solicitudes preflight
+    "allow_headers": ["Content-Type", "Authorization"]  # Añade cualquier cabecera que necesites
+}})
 
 # Conectar a la base de datos SQLite especificando la URI de la base de datos
 db = SQLDatabase.from_uri("sqlite:///datasources/inventario.db")
@@ -64,7 +74,24 @@ def langchain_db():
         return jsonify({'error': str(e)}), 500
 
 
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.json.get('message')
+    
+    # Procesar la consulta utilizando el modelo de lenguaje
+    try:
+        modified_query = base_prompt.format(query=user_message)
+        result = db_chain.run(modified_query)
+        return jsonify({"response": result.strip()})  # Retorna la respuesta procesada
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
+
 # Ejecuta la aplicación Flask si este archivo es el principal
 if __name__ == '__main__':
     # Inicia el servidor en modo debug en el puerto 5010
     app.run(debug=True, port=5010)
+
+
