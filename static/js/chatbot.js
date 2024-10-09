@@ -130,9 +130,10 @@
     // Lógica para enviar el mensaje y obtener la respuesta
     sendButton.onclick = async () => {
         const message = userInput.value.trim(); // Eliminar espacios innecesarios
-
+        console.log('Entro en onclick');
         if (!message) {
             console.error('No message provided');
+            console.log('No message provided');
             return;
         }
 
@@ -148,7 +149,7 @@
             });
 
             const data = await response.json();
-
+            console.log('data response: ' + data);
             if (data.error) {
                 console.error('Error:', data.error);
                 chatOutput.innerHTML += `<p>Error: ${data.error}</p>`;
