@@ -103,6 +103,10 @@ base_prompt = PromptTemplate(
 def index():
     return render_template('index.html')
 
+# @app.route('/cliente')
+# def cliente():
+#     return render_template('cliente.html')
+
 @app.route('/langchain-db', methods=['POST'])
 def langchain_db():
     data = request.get_json()

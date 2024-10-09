@@ -142,13 +142,14 @@ textarea {
     padding: 10px; /* Espacio interno del contenedor */
 }
 
-#chatbot-container {
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
+/* #chatbot-container { */
+    /* transition: all 0.3s ease;
+    opacity: 0.5; */
+    /* visibility: hidden; */
+/* } */
 
-#chatbot-container.show {
+/* #chatbot-container.show {
     opacity: 1;
     visibility: visible;
-}
+} */
+

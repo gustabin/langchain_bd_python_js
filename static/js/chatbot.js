@@ -9,8 +9,8 @@
     // Validar API key antes de mostrar el chatbot
     async function validateApiKey(apiKey) {
         try {
-            // const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
-            const response = await fetch('https://echodb-rlca.onrender.com/validate-api-key', {
+            const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
+                // const response = await fetch('https://echodb-rlca.onrender.com/validate-api-key', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -22,7 +22,7 @@
 
             if (data.access) {
                 // Mostrar el chatbot si el acceso es válido
-                chatContainer.style.display = 'block';
+                // chatContainer.style.display = 'block';
                 console.log('Bienvenido, ' + data.user.name);
                 console.log('Todo el registro, ' + JSON.stringify(data));
                 // console.log('email, ' + data.user.email);
@@ -138,8 +138,8 @@
         }
 
         try {
-            // const response = await fetch('http://127.0.0.1:5010/chat', {
-            const response = await fetch('https://echodb-rlca.onrender.com/chat', {
+            const response = await fetch('http://127.0.0.1:5010/chat', {
+                // const response = await fetch('https://echodb-rlca.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
