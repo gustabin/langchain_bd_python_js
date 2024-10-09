@@ -77,25 +77,31 @@ class User(db.Model):
     def __repr__(self):
         return f'<User {self.name}>'
 
+
 # Habilitar CORS para la aplicación Flask
 CORS(app, resources={r"/chat": {
     "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
     "methods": ["GET", "POST", "OPTIONS"],
     "allow_headers": ["Content-Type", "Authorization"]
+}, r"/validate-api-key": {  # Añadir esta línea
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
+    "methods": ["POST"],
+    "allow_headers": ["Content-Type", "Authorization"]
 }})
+
 
 # Configurar el modelo de lenguaje para LangChain
 llm = OpenAI(temperature=0, verbose=True)
 db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri("sqlite:///datasources/inventario.db"), verbose=True)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 base_prompt = PromptTemplate(
     input_variables=["query"],
     template="Responde en español y evita añadir frases innecesarias como 'Final answer here': {query}"
 )
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/langchain-db', methods=['POST'])
 def langchain_db():
@@ -174,6 +180,39 @@ def register():
 
     return render_template('register.html', form=form)
 
+@app.route('/validate-api-key', methods=['POST'])
+def validate_api_key():
+    data = request.get_json()
+    api_key = data.get('api_key')
+
+    if not api_key:
+        return jsonify({'error': 'API key is missing'}), 400
+
+    user = User.query.filter_by(api_key=api_key).first()
+
+    if user:
+        # Usuario encontrado, retornar los datos
+        return jsonify({
+            'access': True,
+            'user': {
+                'name': user.name,
+                'email': user.email,
+                'website': user.website,
+                'password': user.password,
+                'hostDB': user.hostDB,
+                'userDB': user.userDB,
+                'passwordDB': user.passwordDB,
+                'databaseDB': user.databaseDB,
+                'db_type': user.db_type,
+                'port': user.port,
+                'ssl_enabled': user.ssl_enabled,
+                'charset': user.charset
+                # Puedes incluir más campos si es necesario
+            }
+        }), 200
+    else:
+        # API key inválido
+        return jsonify({'access': False, 'message': 'No tienes acceso al chatbot.'}), 403
 
 
 if __name__ == '__main__':

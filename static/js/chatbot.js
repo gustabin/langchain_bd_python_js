@@ -1,4 +1,3 @@
-// chatbot.js
 (function () {
     const apiKey = document.currentScript.getAttribute('data-api-key');
 
@@ -7,6 +6,44 @@
         return;
     }
 
+    // Validar API key antes de mostrar el chatbot
+    async function validateApiKey(apiKey) {
+        try {
+            const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ api_key: apiKey })
+            });
+
+            const data = await response.json();
+
+            if (data.access) {
+                // Mostrar el chatbot si el acceso es válido
+                chatContainer.style.display = 'block';
+                console.log('Bienvenido, ' + data.user.name);
+                console.log('Todo el registro, ' + JSON.stringify(data));
+                // console.log('email, ' + data.user.email);
+                // console.log('website, ' + data.user.website);
+                // console.log('password, ' + data.user.password);
+                // console.log('hostDB, ' + data.user.hostDB);
+                // console.log('userDB, ' + data.user.userDB);
+                // console.log('passwordDB, ' + data.user.passwordDB);
+                // console.log('databaseDB, ' + data.user.databaseDB);
+                // console.log('db_type, ' + data.user.db_type);
+                // console.log('port, ' + data.user.port);
+                // console.log('ssl_enabled, ' + data.user.ssl_enabled);
+                // console.log('charset, ' + data.user.charset);
+            } else {
+                console.error(data.message);
+            }
+        } catch (error) {
+            console.error('Error validating API key:', error);
+        }
+    }
+
+    // Crear el contenedor del chatbot (oculto inicialmente)
     const chatContainer = document.createElement('div');
     chatContainer.id = 'chatbot-container';
     chatContainer.style.position = 'absolute';
@@ -16,7 +53,7 @@
     chatContainer.style.border = '1px solid #ccc';
     chatContainer.style.borderRadius = '10px';
     chatContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
-    chatContainer.style.display = 'none';
+    chatContainer.style.display = 'none'; // Inicialmente oculto
 
     const chatContent = document.createElement('div');
     chatContent.innerHTML = '<h3>Chatbot</h3><p>¡Hola! Estoy aquí para ayudarte.</p>';
@@ -51,6 +88,7 @@
     chatContainer.appendChild(sendButton);
 
     document.body.appendChild(chatContainer);
+
 
     const openButton = document.createElement('button');
     openButton.innerText = '💬';
@@ -99,7 +137,6 @@
 
         try {
             const response = await fetch('http://127.0.0.1:5010/chat', {
-                // const response = await fetch('https://echodb-rlca.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,4 +164,7 @@
             chatOutput.innerHTML += `<p>Error: ${error.message}</p>`;
         }
     };
+
+    // Llamar a la función para validar la API key
+    validateApiKey(apiKey);
 })();

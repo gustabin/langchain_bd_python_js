@@ -57,15 +57,7 @@ pre {
     word-wrap: break-word; /* Permite que las palabras largas se dividan si es necesario */
 }
 
-/* Estilo para el contenedor del chatbot */
-.chatbot-container {
-    border: 1px solid #ddd; /* Borde gris claro para el contenedor */
-    border-radius: 4px; /* Bordes redondeados */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    margin-top: 10px; /* Espacio superior opcional */
-    max-width: 90%; /* Ancho máximo al 90% del contenedor padre */
-    padding: 10px; /* Espacio interno del contenedor */
-}
+
 
 /* Estilo específico para el área de salida del chatbot */
 #chat-output {
@@ -150,3 +142,13 @@ textarea {
     padding: 10px; /* Espacio interno del contenedor */
 }
 
+#chatbot-container {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#chatbot-container.show {
+    opacity: 1;
+    visibility: visible;
+}
