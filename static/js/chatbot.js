@@ -9,8 +9,8 @@
     // Validar API key antes de mostrar el chatbot
     async function validateApiKey(apiKey) {
         try {
-            const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
-                // const response = await fetch('https://echodb-rlca.onrender.com/validate-api-key', {
+            // const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
+            const response = await fetch('https://echodb-rlca.onrender.com/validate-api-key', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,7 +24,7 @@
                 // Mostrar el chatbot si el acceso es válido
                 // chatContainer.style.display = 'block';
                 console.log('Bienvenido, ' + data.user.name);
-                console.log('Todo el registro, ' + JSON.stringify(data));
+                // console.log('Todo el registro, ' + JSON.stringify(data));
                 // console.log('email, ' + data.user.email);
                 // console.log('website, ' + data.user.website);
                 // console.log('password, ' + data.user.password);
@@ -130,16 +130,14 @@
     // Lógica para enviar el mensaje y obtener la respuesta
     sendButton.onclick = async () => {
         const message = userInput.value.trim(); // Eliminar espacios innecesarios
-        console.log('Entro en onclick');
         if (!message) {
             console.error('No message provided');
-            console.log('No message provided');
             return;
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:5010/chat', {
-                // const response = await fetch('https://echodb-rlca.onrender.com/chat', {
+            // const response = await fetch('http://127.0.0.1:5010/chat', {
+            const response = await fetch('https://echodb-rlca.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -149,7 +147,6 @@
             });
 
             const data = await response.json();
-            console.log('data response: ' + data);
             if (data.error) {
                 console.error('Error:', data.error);
                 chatOutput.innerHTML += `<p>Error: ${data.error}</p>`;
