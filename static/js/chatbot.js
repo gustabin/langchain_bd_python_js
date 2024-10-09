@@ -9,7 +9,8 @@
     // Validar API key antes de mostrar el chatbot
     async function validateApiKey(apiKey) {
         try {
-            const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
+            // const response = await fetch('http://127.0.0.1:5010/validate-api-key', {
+            const response = await fetch('https://echodb-rlca.onrender.com/validate-api-key', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -136,7 +137,8 @@
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:5010/chat', {
+            // const response = await fetch('http://127.0.0.1:5010/chat', {
+            const response = await fetch('https://echodb-rlca.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
