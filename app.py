@@ -1,5 +1,5 @@
 # Para manejar la aplicación web
-from flask import render_template, Flask, request, jsonify, redirect, url_for, flash
+from flask import render_template, Flask, request, jsonify, redirect, url_for, flash, session
 from flask_cors import CORS
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
@@ -19,7 +19,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # Usa una ruta absoluta para evitar problemas de ruta
-DATABASE_PATH = os.path.join(os.path.dirname(__file__), 'datasources/echoDB.db')
+DATABASE_PATH = os.path.join(
+    os.path.dirname(__file__), 'datasources/echoDB.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -31,27 +32,31 @@ db = SQLAlchemy(app)
 
 # Reemplaza esta clave con la que generaste y guardaste
 # SECRET_KEY = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
-app.config['SECRET_KEY'] = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='  # Asegúrate de que esta clave sea secreta y segura
+# Asegúrate de que esta clave sea secreta y segura
+app.config['SECRET_KEY'] = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 
-
-from werkzeug.security import generate_password_hash, check_password_hash
 
 # Definición del modelo de usuario
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(128))  # Contraseña del usuario encriptada
     website = db.Column(db.String(100), nullable=False)
-    api_key = db.Column(db.String(128), unique=True, nullable=False)  # Clave de API    
+    api_key = db.Column(db.String(128), unique=True,
+                        nullable=False)  # Clave de API
     # Campos para la conexión a la base de datos
     hostDB = db.Column(db.String(100), nullable=False)
     userDB = db.Column(db.String(100), nullable=False)
-    passwordDB = db.Column(db.String(100), nullable=True)  # Contraseña encriptada
+    # Contraseña encriptada
+    passwordDB = db.Column(db.String(100), nullable=True)
     databaseDB = db.Column(db.String(100), nullable=False)
     db_type = db.Column(db.String(50), nullable=False)
     port = db.Column(db.Integer, nullable=True)  # Puerto de la base de datos
-    ssl_enabled = db.Column(db.Boolean, default=False)  # Si SSL está habilitado
+    # Si SSL está habilitado
+    ssl_enabled = db.Column(db.Boolean, default=False)
     charset = db.Column(db.String(50), nullable=True)  # Charset de la conexión
 
     # Método para encriptar la contraseña de la base de datos
@@ -63,13 +68,13 @@ class User(db.Model):
     def get_password_db(self):
         fernet = Fernet(SECRET_KEY)
         return fernet.decrypt(self.passwordDB.encode()).decode()
-    
+
     def set_password(self, password):
         self.password = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
-    
+
     def generate_api_key(self):
         # Generar una clave de API única
         self.api_key = Fernet.generate_key().decode()
@@ -92,12 +97,41 @@ CORS(app, resources={r"/chat": {
 
 # Configurar el modelo de lenguaje para LangChain
 llm = OpenAI(temperature=0, verbose=True)
-db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri("sqlite:///datasources/inventario.db"), verbose=True)
+db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri(
+    "sqlite:///datasources/inventario.db"), verbose=True)
 
 base_prompt = PromptTemplate(
     input_variables=["query"],
     template="Responde en español y evita añadir frases innecesarias como 'Final answer here': {query}"
 )
+
+
+def create_db_chain(user):
+    """
+    Crea una cadena de conexión dinámica para la base de datos según el tipo de base de datos del usuario.
+    """
+    if user.db_type == 'sqlite':
+        # Crear la URI para SQLite
+        db_uri = f'sqlite:///{user.databaseDB}'
+    elif user.db_type == 'mysql':
+        # Crear la URI para MySQL
+        db_uri = f'mysql+pymysql://{user.userDB}:{user.get_password_db()}@{user.hostDB}:{user.port}/{user.databaseDB}'
+    elif user.db_type == 'postgresql':
+        # Crear la URI para PostgreSQL
+        db_uri = f'postgresql://{user.userDB}:{user.get_password_db()}@{user.hostDB}:{user.port}/{user.databaseDB}'
+    else:
+        raise ValueError(
+            f"Tipo de base de datos '{user.db_type}' no soportado.")
+
+    # Crear el conector SQLAlchemy con la URI generada
+    engine = create_engine(db_uri)
+
+    # Crear el objeto SQLDatabase para LangChain
+    sql_db = SQLDatabase(engine)
+
+    # Crear el SQLDatabaseChain usando el modelo de lenguaje
+    return SQLDatabaseChain.from_llm(llm, sql_db, verbose=True)
+
 
 @app.route('/')
 def index():
@@ -107,17 +141,31 @@ def index():
 # def cliente():
 #     return render_template('cliente.html')
 
+
 @app.route('/langchain-db', methods=['POST'])
 def langchain_db():
     data = request.get_json()
     query = data.get('query')
 
+    # Recuperar el usuario desde la sesión
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({'error': 'Usuario no validado'}), 401
+
+    # Recuperar la información del usuario validado
+    user = User.query.get(user_id)
+
     try:
+        # Crear el db_chain dinámico para el usuario
+        db_chain = create_db_chain(user)
+
+        # Ejecutar la consulta utilizando LangChain
         modified_query = base_prompt.format(query=query)
         result = db_chain.run(modified_query)
         return jsonify({'result': result.strip()}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -129,7 +177,6 @@ def chat():
         return jsonify({"response": result.strip()})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -143,7 +190,8 @@ def register():
             return render_template('register.html', form=form)
 
         # Aquí imprimes el valor del campo passwordDB
-        print(f"SSL Enabled Value: {form.passwordDB.data}")  # Imprime el valor recibido
+        # Imprime el valor recibido
+        print(f"SSL Enabled Value: {form.passwordDB.data}")
 
         new_user = User(
             name=form.name.data,
@@ -153,7 +201,8 @@ def register():
             userDB=form.userDB.data,
             databaseDB=form.databaseDB.data,
             db_type=form.db_type.data,
-            port=form.port.data if form.port.data else None,  # Asignar None si el campo está vacío
+            # Asignar None si el campo está vacío
+            port=form.port.data if form.port.data else None,
             ssl_enabled=(form.ssl_enabled.data == 'true'),
             charset=form.charset.data
         )
@@ -163,8 +212,9 @@ def register():
 
         # Encripta la contraseña de la base de datos si se proporciona
         if form.passwordDB.data:
-            new_user.set_password_db(form.passwordDB.data)  # Encriptar la contraseña de la base de datos
-        
+            # Encriptar la contraseña de la base de datos
+            new_user.set_password_db(form.passwordDB.data)
+
          # Generar y asignar la clave de API
         new_user.generate_api_key()
 
@@ -176,13 +226,15 @@ def register():
             flash(f'Por favor, copia y pega este script en tu sitio web: '
                   f'<script src="https://echodb-rlca.onrender.com/static/js/chatbot.js" '
                   f'data-api-key="{new_user.api_key}"></script>', 'info')
-            return redirect(url_for('register'))  # Redirige o muestra un mensaje
+            # Redirige o muestra un mensaje
+            return redirect(url_for('register'))
         except Exception as e:
             db.session.rollback()  # Revierte la sesión si ocurre un error
             flash('Error al registrar el usuario. Inténtalo de nuevo.', 'danger')
             print(f'Error: {e}')  # Imprime el error para depuración
 
     return render_template('register.html', form=form)
+
 
 @app.route('/validate-api-key', methods=['POST'])
 def validate_api_key():
@@ -195,27 +247,10 @@ def validate_api_key():
     user = User.query.filter_by(api_key=api_key).first()
 
     if user:
-        # Usuario encontrado, retornar los datos
-        return jsonify({
-            'access': True,
-            'user': {
-                'name': user.name,
-                'email': user.email,
-                'website': user.website,
-                'password': user.password,
-                'hostDB': user.hostDB,
-                'userDB': user.userDB,
-                'passwordDB': user.passwordDB,
-                'databaseDB': user.databaseDB,
-                'db_type': user.db_type,
-                'port': user.port,
-                'ssl_enabled': user.ssl_enabled,
-                'charset': user.charset
-                # Puedes incluir más campos si es necesario
-            }
-        }), 200
+        # Almacenar la información del usuario en la sesión
+        session['user_id'] = user.id
+        return jsonify({'access': True}), 200
     else:
-        # API key inválido
         return jsonify({'access': False, 'message': 'No tienes acceso al chatbot.'}), 403
 
 
