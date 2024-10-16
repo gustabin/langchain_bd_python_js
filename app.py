@@ -1,5 +1,5 @@
 # Para manejar la aplicación web
-from flask import render_template, Flask, request, jsonify, redirect, url_for, flash, session
+from flask import render_template, Flask, request, jsonify, redirect, url_for, flash
 from flask_cors import CORS
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
@@ -34,7 +34,6 @@ db = SQLAlchemy(app)
 # SECRET_KEY = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
 # Asegúrate de que esta clave sea secreta y segura
 app.config['SECRET_KEY'] = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 
 
 # Definición del modelo de usuario
@@ -106,33 +105,6 @@ base_prompt = PromptTemplate(
 )
 
 
-def create_db_chain(user):
-    """
-    Crea una cadena de conexión dinámica para la base de datos según el tipo de base de datos del usuario.
-    """
-    if user.db_type == 'sqlite':
-        # Crear la URI para SQLite
-        db_uri = f'sqlite:///{user.databaseDB}'
-    elif user.db_type == 'mysql':
-        # Crear la URI para MySQL
-        db_uri = f'mysql+pymysql://{user.userDB}:{user.get_password_db()}@{user.hostDB}:{user.port}/{user.databaseDB}'
-    elif user.db_type == 'postgresql':
-        # Crear la URI para PostgreSQL
-        db_uri = f'postgresql://{user.userDB}:{user.get_password_db()}@{user.hostDB}:{user.port}/{user.databaseDB}'
-    else:
-        raise ValueError(
-            f"Tipo de base de datos '{user.db_type}' no soportado.")
-
-    # Crear el conector SQLAlchemy con la URI generada
-    engine = create_engine(db_uri)
-
-    # Crear el objeto SQLDatabase para LangChain
-    sql_db = SQLDatabase(engine)
-
-    # Crear el SQLDatabaseChain usando el modelo de lenguaje
-    return SQLDatabaseChain.from_llm(llm, sql_db, verbose=True)
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -147,19 +119,7 @@ def langchain_db():
     data = request.get_json()
     query = data.get('query')
 
-    # Recuperar el usuario desde la sesión
-    user_id = session.get('user_id')
-    if not user_id:
-        return jsonify({'error': 'Usuario no validado'}), 401
-
-    # Recuperar la información del usuario validado
-    user = User.query.get(user_id)
-
     try:
-        # Crear el db_chain dinámico para el usuario
-        db_chain = create_db_chain(user)
-
-        # Ejecutar la consulta utilizando LangChain
         modified_query = base_prompt.format(query=query)
         result = db_chain.run(modified_query)
         return jsonify({'result': result.strip()}), 200
@@ -247,10 +207,27 @@ def validate_api_key():
     user = User.query.filter_by(api_key=api_key).first()
 
     if user:
-        # Almacenar la información del usuario en la sesión
-        session['user_id'] = user.id
-        return jsonify({'access': True}), 200
+        # Usuario encontrado, retornar los datos
+        return jsonify({
+            'access': True,
+            'user': {
+                'name': user.name,
+                'email': user.email,
+                'website': user.website,
+                'password': user.password,
+                'hostDB': user.hostDB,
+                'userDB': user.userDB,
+                'passwordDB': user.passwordDB,
+                'databaseDB': user.databaseDB,
+                'db_type': user.db_type,
+                'port': user.port,
+                'ssl_enabled': user.ssl_enabled,
+                'charset': user.charset
+                # Puedes incluir más campos si es necesario
+            }
+        }), 200
     else:
+        # API key inválido
         return jsonify({'access': False, 'message': 'No tienes acceso al chatbot.'}), 403
 
 
