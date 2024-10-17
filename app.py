@@ -10,11 +10,13 @@ from flask_sqlalchemy import SQLAlchemy
 from cryptography.fernet import Fernet
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import RegistrationForm
+from sqlalchemy.exc import OperationalError
 import os
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
+# openai_api_key = os.getenv('OPENAI_API_KEY')
 # Crear una instancia de la aplicación Flask
 app = Flask(__name__)
 
@@ -33,6 +35,7 @@ db = SQLAlchemy(app)
 # Reemplaza esta clave con la que generaste y guardaste
 # SECRET_KEY = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
 # Asegúrate de que esta clave sea secreta y segura
+
 app.config['SECRET_KEY'] = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
 
 
@@ -96,6 +99,7 @@ CORS(app, resources={r"/chat": {
 
 # Configurar el modelo de lenguaje para LangChain
 llm = OpenAI(temperature=0, verbose=True)
+# llm = OpenAI(api_key=openai_api_key, temperature=0, verbose=True)
 db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri(
     "sqlite:///datasources/inventario.db"), verbose=True)
 
@@ -123,6 +127,8 @@ def langchain_db():
         modified_query = base_prompt.format(query=query)
         result = db_chain.run(modified_query)
         return jsonify({'result': result.strip()}), 200
+    except OperationalError as e:
+        return jsonify({'error': 'Lo siento, pero solo manejo información relacionada con la base de datos.'}), 400
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -132,11 +138,27 @@ def chat():
     user_message = request.json.get('message')
 
     try:
+        # Preparar la consulta con LangChain
         modified_query = base_prompt.format(query=user_message)
+
+        # Obtener la respuesta del modelo
         result = db_chain.run(modified_query)
-        return jsonify({"response": result.strip()})
+
+        # Retornar tanto la pregunta como la respuesta
+        return jsonify({
+            "question": user_message,  # Mostrar la pregunta del usuario
+            "response": result.strip()  # Mostrar la respuesta del modelo
+        })
+
+    except OperationalError as e:
+        return jsonify({
+            "error": 'Lo siento, pero solo manejo información relacionada con la base de datos.'
+        }), 400
+
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({
+            "error": str(e)
+        }), 500
 
 
 @app.route('/register', methods=['GET', 'POST'])

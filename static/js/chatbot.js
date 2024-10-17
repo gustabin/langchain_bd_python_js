@@ -57,8 +57,11 @@
     chatContainer.style.display = 'none'; // Inicialmente oculto
 
     const chatContent = document.createElement('div');
-    chatContent.innerHTML = '<h3>Chatbot</h3><p>¡Hola! Estoy aquí para ayudarte.</p>';
+    chatContent.innerHTML = '<strong>🤖Flashbot</strong><br>¡Hola! Estoy aquí para ayudarte.';
     chatContent.style.padding = '10px';
+    chatContent.style.backgroundColor = 'azure';
+    chatContent.style.borderTopLeftRadius = '10px'; // Asegurar que el contenido también tenga bordes redondeados en la parte superior
+    chatContent.style.borderTopRightRadius = '10px'; // Asegurar que el contenido también tenga bordes redondeados en la parte superior
     chatContainer.appendChild(chatContent);
 
     const chatOutput = document.createElement('div');
@@ -68,14 +71,13 @@
     chatOutput.style.padding = '5px';
     chatContainer.appendChild(chatOutput);
 
-    const userInput = document.createElement('input');
-    userInput.type = 'text';
+    const userInput = document.createElement('textarea');
     userInput.id = 'user-input';
     userInput.placeholder = 'Escribe tu consulta aquí...';
     userInput.style.marginTop = '10px';
     userInput.style.marginLeft = '10px';
     userInput.style.marginRight = '10px';
-    userInput.style.height = '40px';
+    userInput.style.height = '80px';
     userInput.style.width = 'calc(100% - 42px)';
     chatContainer.appendChild(userInput);
 
@@ -85,11 +87,29 @@
     sendButton.style.marginTop = '10px';
     sendButton.style.marginLeft = '10px';
     sendButton.style.marginBottom = '10px';
+    sendButton.style.backgroundColor = 'dodgerblue';
     sendButton.disabled = true; // El botón empieza deshabilitado
     chatContainer.appendChild(sendButton);
 
-    document.body.appendChild(chatContainer);
+    // // Crear el loader (oculto inicialmente)
+    // const loader = document.createElement('span');
+    // loader.id = 'loader';
+    // loader.style.marginLeft = '10px';
+    // loader.style.display = 'none'; // Oculto inicialmente
+    // loader.innerHTML = '⏳'; // O puedes usar un ícono de carga personalizado (puede ser un GIF o cualquier símbolo)
+    // chatContainer.appendChild(loader);
 
+    // Crear el loader (oculto inicialmente)
+    const loader = document.createElement('img');
+    loader.id = 'loader';
+    loader.src = 'https://echodb-rlca.onrender.com/static/img/barra.gif'; // Asegúrate de ajustar la ruta correcta
+    loader.style.marginLeft = '10px';
+    loader.style.display = 'none'; // Oculto inicialmente
+    loader.style.width = '125px';   // Puedes ajustar el tamaño si es necesario
+    chatContainer.appendChild(loader);
+
+
+    document.body.appendChild(chatContainer);
 
     const openButton = document.createElement('button');
     openButton.innerText = '💬';
@@ -118,6 +138,22 @@
 
     document.body.appendChild(openButton);
 
+    // Habilitar el envío al presionar la tecla "Enter"
+    userInput.addEventListener('keydown', function (event) {
+        // Si se presiona solo "Enter" (sin Shift), se envía el mensaje
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault(); // Evitar que se agregue un salto de línea
+            if (!sendButton.disabled) {  // Solo hacer clic si el botón no está deshabilitado
+                sendButton.click(); // Simula un clic en el botón de "Enviar"
+            }
+        }
+        // Si se presiona "Shift + Enter", se permite el salto de línea
+        else if (event.key === 'Enter' && event.shiftKey) {
+            // No hacer nada, por lo que el salto de línea se permite
+            return;
+        }
+    });
+
     // Habilitar/deshabilitar el botón según el contenido del input
     userInput.addEventListener('input', function () {
         if (userInput.value.trim() === '') {
@@ -135,6 +171,9 @@
             return;
         }
 
+        // Mostrar el loader cuando se hace clic en el botón de enviar
+        loader.style.display = 'inline';
+
         try {
             const response = await fetch('http://127.0.0.1:5010/chat', {
                 // const response = await fetch('https://echodb-rlca.onrender.com/chat', {
@@ -149,9 +188,11 @@
             const data = await response.json();
             if (data.error) {
                 console.error('Error:', data.error);
-                chatOutput.innerHTML += `<p>Error: ${data.error}</p>`;
+                chatOutput.innerHTML += `<p><strong>Error:</strong> ${data.error}</p>`;
             } else {
-                chatOutput.innerHTML += `<p>${data.response}</p>`;
+                // Mostrar la pregunta y la respuesta en el chat
+                chatOutput.innerHTML += `<strong>${data.question}</strong></br>`;
+                chatOutput.innerHTML += `${data.response}<p></p>`;
                 chatOutput.scrollTop = chatOutput.scrollHeight; // Auto scroll to the bottom
             }
 
@@ -161,7 +202,10 @@
 
         } catch (error) {
             console.error('Error fetching response:', error);
-            chatOutput.innerHTML += `<p>Error: ${error.message}</p>`;
+            chatOutput.innerHTML += `<p><strong>Error:</strong> ${error.message}</p>`;
+        } finally {
+            // Ocultar el loader cuando se complete la respuesta
+            loader.style.display = 'none';
         }
     };
 
