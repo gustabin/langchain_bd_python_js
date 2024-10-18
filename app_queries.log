@@ -1336,3 +1336,1343 @@ request_id: req_70646a858a1b75c705ef3f2007608eea
 Resultado obtenido: El cliente con ID 1 gastó un total de 199.98 en todas sus compras.
 2024-10-18 13:02:35 INFO: 127.0.0.1 - - [18/Oct/2024 13:02:35] "POST /chat HTTP/1.1" 200 -
 127.0.0.1 - - [18/Oct/2024 13:02:35] "POST /chat HTTP/1.1" 200 -
+2024-10-18 13:04:05 INFO: 127.0.0.1 - - [18/Oct/2024 13:04:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 13:04:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 13:04:05 INFO: 127.0.0.1 - - [18/Oct/2024 13:04:05] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 13:04:05] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 16:48:01 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:48:01 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:48:01 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:48:01 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:48:01 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-18 16:48:01 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:48:01 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:48:03 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:48:03 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:48:03 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:48:03 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:48:03 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:48:03 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:49:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:00 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-18 16:49:00 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:49:00 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:49:02 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:02 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:02 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:02 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:02 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:49:02 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:49:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:55 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-18 16:49:55 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:49:55 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:49:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:49:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:49:57 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:49:57 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:50:11 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 16:50:11 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:50:14 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:14 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:14 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:14 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:14 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:50:14 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:50:14 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:50:23 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:23 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:23 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:23 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:24 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:50:24 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 16:50:24 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:50:24 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:50:26 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:26 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:26 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:50:26 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:50:26 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:50:26 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:50:26 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 16:50:34 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:34] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:34] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 16:50:41 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:41] "GET / HTTP/1.1" 200 -
+2024-10-18 16:50:41 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 16:50:41 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/js/scripts.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2024-10-18 16:50:41 INFO: 127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 16:50:41] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 16:56:04 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:56:04 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:56:04 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:56:04 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:56:04 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:56:04 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 16:56:04 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:56:04 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:56:06 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:56:06 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:56:06 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:56:06 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:56:07 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:56:07 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:56:07 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:58:45 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 16:58:45 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:58:47 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:47 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:47 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:47 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:48 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:58:48 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:58:48 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:58:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:55 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:58:55 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 16:58:55 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:58:55 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:58:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:58:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:58:57 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:58:57 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:58:57 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:59:17 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 16:59:18 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:59:20 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:20 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:20 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:20 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:20 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:59:20 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:59:20 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 16:59:26 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:26 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:26 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:26 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:27 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:59:27 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 16:59:27 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 16:59:27 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 16:59:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 16:59:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 16:59:29 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 16:59:29 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 16:59:29 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:00:12 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:00:13 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:00:15 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:00:15 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:00:15 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:00:15 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:00:15 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:00:15 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:00:15 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:00:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:46] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:46] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:00:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:00:51] "GET / HTTP/1.1" 200 -
+2024-10-18 17:00:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2024-10-18 17:00:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:00:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:00:51] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:00:58 INFO: Consulta recibida: ¿Cuántas unidades de cada producto se han vendido?
+Consulta recibida: ¿Cuántas unidades de cada producto se han vendido?
+2024-10-18 17:00:58 DEBUG: Consulta modificada para LangChain: Responde a la pregunta '¿Cuántas unidades de cada producto se han vendido?' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.
+Consulta modificada para LangChain: Responde a la pregunta '¿Cuántas unidades de cada producto se han vendido?' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.
+2024-10-18 17:00:58 DEBUG: Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+2024-10-18 17:00:58 DEBUG: Sending HTTP Request: POST https://api.openai.com/v1/completions
+Sending HTTP Request: POST https://api.openai.com/v1/completions
+2024-10-18 17:00:58 DEBUG: connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+2024-10-18 17:00:58 DEBUG: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B5606A3C90>
+connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B5606A3C90>
+2024-10-18 17:00:58 DEBUG: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002B55F4064E0> server_hostname='api.openai.com' timeout=None
+start_tls.started ssl_context=<ssl.SSLContext object at 0x000002B55F4064E0> server_hostname='api.openai.com' timeout=None
+2024-10-18 17:00:58 DEBUG: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B5606BEB50>
+start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B5606BEB50>
+2024-10-18 17:00:58 DEBUG: send_request_headers.started request=<Request [b'POST']>
+send_request_headers.started request=<Request [b'POST']>
+2024-10-18 17:00:58 DEBUG: send_request_headers.complete
+send_request_headers.complete
+2024-10-18 17:00:58 DEBUG: send_request_body.started request=<Request [b'POST']>
+send_request_body.started request=<Request [b'POST']>
+2024-10-18 17:00:58 DEBUG: send_request_body.complete
+send_request_body.complete
+2024-10-18 17:00:58 DEBUG: receive_response_headers.started request=<Request [b'POST']>
+receive_response_headers.started request=<Request [b'POST']>
+2024-10-18 17:00:59 DEBUG: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:00:59 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'441'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89301'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'466ms'), (b'x-request-id', b'req_a83672bb28f5c677a10749e3d45f7896'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=ZfD4dzXMUfCUuJVa39GQavTAsPSl3XmcOMonFUWLSFQ-1729281659-1.0.1.1-mHKJ63qWFvFMGgImfY06Dj6P2VpgpRuSkQjFAnKgEHJkT3msYnVt_EYLeZTNhN2qz5m7_aE79D5qKf_EZGf7Bw; path=/; expires=Fri, 18-Oct-24 20:30:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=JnWxNzxZvBh5pFVCuYNWPpLyqA3SBxC1CV9PBDZoVxw-1729281659667-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b1e21087eb531-SCL'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:00:59 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'441'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89301'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'466ms'), (b'x-request-id', b'req_a83672bb28f5c677a10749e3d45f7896'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=ZfD4dzXMUfCUuJVa39GQavTAsPSl3XmcOMonFUWLSFQ-1729281659-1.0.1.1-mHKJ63qWFvFMGgImfY06Dj6P2VpgpRuSkQjFAnKgEHJkT3msYnVt_EYLeZTNhN2qz5m7_aE79D5qKf_EZGf7Bw; path=/; expires=Fri, 18-Oct-24 20:30:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=JnWxNzxZvBh5pFVCuYNWPpLyqA3SBxC1CV9PBDZoVxw-1729281659667-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b1e21087eb531-SCL'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-10-18 17:00:59 INFO: HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-18 17:00:59 DEBUG: receive_response_body.started request=<Request [b'POST']>
+receive_response_body.started request=<Request [b'POST']>
+2024-10-18 17:00:59 DEBUG: receive_response_body.complete
+receive_response_body.complete
+2024-10-18 17:00:59 DEBUG: response_closed.started
+response_closed.started
+2024-10-18 17:00:59 DEBUG: response_closed.complete
+response_closed.complete
+2024-10-18 17:00:59 DEBUG: HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers([('date', 'Fri, 18 Oct 2024 20:00:59 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-allow-origin', '*'), ('access-control-expose-headers', 'X-Request-ID'), ('cache-control', 'no-cache, must-revalidate'), ('openai-model', 'gpt-3.5-turbo-instruct'), ('openai-organization', 'stackcodelab'), ('openai-processing-ms', '441'), ('openai-version', '2020-10-01'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('x-ratelimit-limit-requests', '3500'), ('x-ratelimit-limit-tokens', '90000'), ('x-ratelimit-remaining-requests', '3499'), ('x-ratelimit-remaining-tokens', '89301'), ('x-ratelimit-reset-requests', '17ms'), ('x-ratelimit-reset-tokens', '466ms'), ('x-request-id', 'req_a83672bb28f5c677a10749e3d45f7896'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=ZfD4dzXMUfCUuJVa39GQavTAsPSl3XmcOMonFUWLSFQ-1729281659-1.0.1.1-mHKJ63qWFvFMGgImfY06Dj6P2VpgpRuSkQjFAnKgEHJkT3msYnVt_EYLeZTNhN2qz5m7_aE79D5qKf_EZGf7Bw; path=/; expires=Fri, 18-Oct-24 20:30:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=JnWxNzxZvBh5pFVCuYNWPpLyqA3SBxC1CV9PBDZoVxw-1729281659667-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8d4b1e21087eb531-SCL'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers([('date', 'Fri, 18 Oct 2024 20:00:59 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-allow-origin', '*'), ('access-control-expose-headers', 'X-Request-ID'), ('cache-control', 'no-cache, must-revalidate'), ('openai-model', 'gpt-3.5-turbo-instruct'), ('openai-organization', 'stackcodelab'), ('openai-processing-ms', '441'), ('openai-version', '2020-10-01'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('x-ratelimit-limit-requests', '3500'), ('x-ratelimit-limit-tokens', '90000'), ('x-ratelimit-remaining-requests', '3499'), ('x-ratelimit-remaining-tokens', '89301'), ('x-ratelimit-reset-requests', '17ms'), ('x-ratelimit-reset-tokens', '466ms'), ('x-request-id', 'req_a83672bb28f5c677a10749e3d45f7896'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=ZfD4dzXMUfCUuJVa39GQavTAsPSl3XmcOMonFUWLSFQ-1729281659-1.0.1.1-mHKJ63qWFvFMGgImfY06Dj6P2VpgpRuSkQjFAnKgEHJkT3msYnVt_EYLeZTNhN2qz5m7_aE79D5qKf_EZGf7Bw; path=/; expires=Fri, 18-Oct-24 20:30:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=JnWxNzxZvBh5pFVCuYNWPpLyqA3SBxC1CV9PBDZoVxw-1729281659667-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8d4b1e21087eb531-SCL'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-10-18 17:00:59 DEBUG: request_id: req_a83672bb28f5c677a10749e3d45f7896
+request_id: req_a83672bb28f5c677a10749e3d45f7896
+2024-10-18 17:00:59 DEBUG: Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:SELECT producto, SUM(cantidad) AS "unidades vendidas" FROM ventas GROUP BY producto LIMIT 5\nSQLResult: [(\'Bolsa de dormir\', 3), (\'Botiquín de primeros auxilios\', 1), (\'Brújula\', 1), (\'Cocina portátil\', 1), (\'Colchoneta inflable\', 1)]\nAnswer:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:SELECT producto, SUM(cantidad) AS "unidades vendidas" FROM ventas GROUP BY producto LIMIT 5\nSQLResult: [(\'Bolsa de dormir\', 3), (\'Botiquín de primeros auxilios\', 1), (\'Brújula\', 1), (\'Cocina portátil\', 1), (\'Colchoneta inflable\', 1)]\nAnswer:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+2024-10-18 17:00:59 DEBUG: Sending HTTP Request: POST https://api.openai.com/v1/completions
+Sending HTTP Request: POST https://api.openai.com/v1/completions
+2024-10-18 17:00:59 DEBUG: send_request_headers.started request=<Request [b'POST']>
+send_request_headers.started request=<Request [b'POST']>
+2024-10-18 17:00:59 DEBUG: send_request_headers.complete
+send_request_headers.complete
+2024-10-18 17:00:59 DEBUG: send_request_body.started request=<Request [b'POST']>
+send_request_body.started request=<Request [b'POST']>
+2024-10-18 17:00:59 DEBUG: send_request_body.complete
+send_request_body.complete
+2024-10-18 17:00:59 DEBUG: receive_response_headers.started request=<Request [b'POST']>
+receive_response_headers.started request=<Request [b'POST']>
+2024-10-18 17:01:00 DEBUG: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:01:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'717'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89239'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'506ms'), (b'x-request-id', b'req_adbc711ac07fe5b00f8714f4357b7d22'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b1e2598bbb531-SCL'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:01:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'717'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89239'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'506ms'), (b'x-request-id', b'req_adbc711ac07fe5b00f8714f4357b7d22'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b1e2598bbb531-SCL'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-10-18 17:01:00 INFO: HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-18 17:01:00 DEBUG: receive_response_body.started request=<Request [b'POST']>
+receive_response_body.started request=<Request [b'POST']>
+2024-10-18 17:01:00 DEBUG: receive_response_body.complete
+receive_response_body.complete
+2024-10-18 17:01:00 DEBUG: response_closed.started
+response_closed.started
+2024-10-18 17:01:00 DEBUG: response_closed.complete
+response_closed.complete
+2024-10-18 17:01:00 DEBUG: HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers({'date': 'Fri, 18 Oct 2024 20:01:00 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'cache-control': 'no-cache, must-revalidate', 'openai-model': 'gpt-3.5-turbo-instruct', 'openai-organization': 'stackcodelab', 'openai-processing-ms': '717', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-ratelimit-limit-requests': '3500', 'x-ratelimit-limit-tokens': '90000', 'x-ratelimit-remaining-requests': '3499', 'x-ratelimit-remaining-tokens': '89239', 'x-ratelimit-reset-requests': '17ms', 'x-ratelimit-reset-tokens': '506ms', 'x-request-id': 'req_adbc711ac07fe5b00f8714f4357b7d22', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8d4b1e2598bbb531-SCL', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers({'date': 'Fri, 18 Oct 2024 20:01:00 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'cache-control': 'no-cache, must-revalidate', 'openai-model': 'gpt-3.5-turbo-instruct', 'openai-organization': 'stackcodelab', 'openai-processing-ms': '717', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-ratelimit-limit-requests': '3500', 'x-ratelimit-limit-tokens': '90000', 'x-ratelimit-remaining-requests': '3499', 'x-ratelimit-remaining-tokens': '89239', 'x-ratelimit-reset-requests': '17ms', 'x-ratelimit-reset-tokens': '506ms', 'x-request-id': 'req_adbc711ac07fe5b00f8714f4357b7d22', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8d4b1e2598bbb531-SCL', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-10-18 17:01:00 DEBUG: request_id: req_adbc711ac07fe5b00f8714f4357b7d22
+request_id: req_adbc711ac07fe5b00f8714f4357b7d22
+2024-10-18 17:01:00 DEBUG: Resultado obtenido: Se han vendido 3 unidades de la Bolsa de dormir, 1 unidad del Botiquín de primeros auxilios, 1 unidad de la Brújula, 1 unidad de la Cocina portátil y 1 unidad de la Colchoneta inflable.
+Resultado obtenido: Se han vendido 3 unidades de la Bolsa de dormir, 1 unidad del Botiquín de primeros auxilios, 1 unidad de la Brújula, 1 unidad de la Cocina portátil y 1 unidad de la Colchoneta inflable.
+2024-10-18 17:01:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:00] "POST /langchain-db HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:00] "POST /langchain-db HTTP/1.1" 200 -
+2024-10-18 17:01:09 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:01:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:01:13 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:13] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:13] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:01:13 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:01:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:01:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:15] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:15] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:01:16 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:16] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:01:16] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:01:16 INFO: 127.0.0.1 - - [18/Oct/2024 17:01:16] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:01:16] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:02:48 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:02:48 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:02:50 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:02:50 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:02:50 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:02:50 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:02:50 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:02:51 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:03:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:05] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:03:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:03:51] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:04:35 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:35] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:35] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:04:36 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:36] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:36] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:04:36 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:36] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:36] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:04:43 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:04:43 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:04:45 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:04:45 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:04:45 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:04:45 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:04:45 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:04:45 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:04:45 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:04:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:45] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:45] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:04:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:46] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:04:46] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:04:46 INFO: 127.0.0.1 - - [18/Oct/2024 17:04:46] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:04:46] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:05:09 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:05:09 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:05:11 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:05:11 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:05:11 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:05:11 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:05:12 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:05:12 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:05:12 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:05:14 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:05:14 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:05:16 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:05:16 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:05:16 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:05:16 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:05:17 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:05:17 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:05:17 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:05:17 INFO: 127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:05:17] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:06:20 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:06:20 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:06:22 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:06:22 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:06:22 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:06:22 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:06:23 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:06:23 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:06:23 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:09:57 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:09:57 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:10:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:10:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:10:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:10:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:10:00 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:10:00 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:10:00 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:10:00 INFO: 127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:10:00] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:11:24 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:11:25 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:11:27 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:11:27 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:11:27 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:11:27 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:11:27 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:11:27 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:11:27 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:12:20 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:12:20 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:13:27 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:27 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:27 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:27 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:27 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:13:27 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 17:13:27 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 17:13:27 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:13:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:30 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:13:30 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:13:30 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:13:41 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:13:42 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:13:44 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:44 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:44 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:44 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:44 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:13:44 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:13:44 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:13:45 INFO: 127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:13:45] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:13:51 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:13:52 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:13:54 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:54 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:54 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:54 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:54 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:13:54 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:13:54 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:13:56 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:13:57 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:13:59 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:59 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:59 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:13:59 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:13:59 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:13:59 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:13:59 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:14:01 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:14:01 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:14:03 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:14:03 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:14:03 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:14:03 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:14:04 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:14:04 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:14:04 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:14:53 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:14:54 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:14:56 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:14:56 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:14:56 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:14:56 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:14:56 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:14:56 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:14:56 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:15:37 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:15:37 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:15:40 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:15:40 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:15:40 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:15:40 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:15:40 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:15:40 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:15:40 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:15:48 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:15:49 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:15:51 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:15:51 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:15:51 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:15:51 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:15:51 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:15:51 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:15:51 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:15:51 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:51] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:15:51] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:15:52 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:52] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:15:52] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:15:52 INFO: 127.0.0.1 - - [18/Oct/2024 17:15:52] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:15:52] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:16:07 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:16:07 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:16:09 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:09 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:10 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:10 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:10 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:16:10 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:16:10 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:16:14 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:16:14 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:16:16 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:16 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:16 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:16 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:17 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:16:17 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:16:17 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:16:26 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:16:26 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:16:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:29 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:29 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:29 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:16:29 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:16:29 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:16:29 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:29] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:16:35 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:16:36 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:16:38 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:38 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:38 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:16:38 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:16:38 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:16:38 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:16:38 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:16:39 INFO: 127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:16:39] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:17:29 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:17:29 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:17:32 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:32 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:32 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:32 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:32 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:17:32 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:17:32 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:17:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:32] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:17:46 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:17:46 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:17:48 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:48 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:48 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:48 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:48 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:17:48 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:17:48 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:17:52 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:17:53 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:17:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:55 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:17:55 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:17:55 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:17:55 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:17:55 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:17:55 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:55] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:55] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:17:56 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:56] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:17:56] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:17:56 INFO: 127.0.0.1 - - [18/Oct/2024 17:17:56] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:17:56] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:18:03 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:18:03 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:18:05 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:05 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:05 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:05 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:06 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:18:06 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:18:06 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:18:07 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:07] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:18:12 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:18:12 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:18:15 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:15 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:15 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:15 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:15 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:18:15 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:18:15 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:18:15 INFO: 127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:18:15] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:18:21 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:18:22 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:18:24 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:24 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:24 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:18:24 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:18:24 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:18:24 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:18:24 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:19:11 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:19:12 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:19:14 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:19:14 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:19:14 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:19:14 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:19:14 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:19:14 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:19:14 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:20:48 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:20:48 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:20:50 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:20:50 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:20:50 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:20:50 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:20:51 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:20:51 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:20:51 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:20:56 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:20:56 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:20:58 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:20:58 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:20:58 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:20:58 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:20:59 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:20:59 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:20:59 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:21:04 INFO:  * Detected change in 'C:\\langchain_bd\\app.py', reloading
+ * Detected change in 'C:\\langchain_bd\\app.py', reloading
+2024-10-18 17:21:04 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:21:06 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:21:06 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:21:06 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:21:06 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:21:06 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:21:06 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:21:06 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "[36mGET /static/js/chatbot.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:21:43 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:43] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:21:43] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:21:44 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:44] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:21:44] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:21:44 INFO: 127.0.0.1 - - [18/Oct/2024 17:21:44] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2024 17:21:44] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-10-18 17:24:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:24:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:24:57 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:24:57 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:24:58 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:24:58 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5010
+2024-10-18 17:24:58 INFO: [33mPress CTRL+C to quit[0m
+[33mPress CTRL+C to quit[0m
+2024-10-18 17:24:58 INFO:  * Restarting with stat
+ * Restarting with stat
+2024-10-18 17:25:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:25:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:25:00 DEBUG: load_ssl_context verify=True cert=None trust_env=True http2=False
+load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-18 17:25:00 DEBUG: load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+load_verify_locations cafile='C:\\langchain_bd\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-10-18 17:25:00 INFO: Las tablas ya existen, no es necesario crearlas.
+Las tablas ya existen, no es necesario crearlas.
+2024-10-18 17:25:00 WARNING:  * Debugger is active!
+ * Debugger is active!
+2024-10-18 17:25:00 INFO:  * Debugger PIN: 898-485-543
+ * Debugger PIN: 898-485-543
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/js/chatbot.js HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "POST /validate-api-key HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "POST /validate-api-key HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "OPTIONS /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:25:05 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:05] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2024-10-18 17:25:16 INFO: Consulta recibida: ¿Cuántas unidades de cada producto se han vendido?
+Consulta recibida: ¿Cuántas unidades de cada producto se han vendido?
+2024-10-18 17:25:16 DEBUG: Consulta modificada para LangChain: Responde a la pregunta '¿Cuántas unidades de cada producto se han vendido?' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.
+Consulta modificada para LangChain: Responde a la pregunta '¿Cuántas unidades de cada producto se han vendido?' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.
+2024-10-18 17:25:16 DEBUG: Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+2024-10-18 17:25:16 DEBUG: Sending HTTP Request: POST https://api.openai.com/v1/completions
+Sending HTTP Request: POST https://api.openai.com/v1/completions
+2024-10-18 17:25:16 DEBUG: connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+2024-10-18 17:25:16 DEBUG: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020A145F0950>
+connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020A145F0950>
+2024-10-18 17:25:16 DEBUG: start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020A1335A4E0> server_hostname='api.openai.com' timeout=None
+start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020A1335A4E0> server_hostname='api.openai.com' timeout=None
+2024-10-18 17:25:16 DEBUG: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020A145F0A10>
+start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020A145F0A10>
+2024-10-18 17:25:16 DEBUG: send_request_headers.started request=<Request [b'POST']>
+send_request_headers.started request=<Request [b'POST']>
+2024-10-18 17:25:16 DEBUG: send_request_headers.complete
+send_request_headers.complete
+2024-10-18 17:25:16 DEBUG: send_request_body.started request=<Request [b'POST']>
+send_request_body.started request=<Request [b'POST']>
+2024-10-18 17:25:16 DEBUG: send_request_body.complete
+send_request_body.complete
+2024-10-18 17:25:16 DEBUG: receive_response_headers.started request=<Request [b'POST']>
+receive_response_headers.started request=<Request [b'POST']>
+2024-10-18 17:25:17 DEBUG: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:25:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'767'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89301'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'466ms'), (b'x-request-id', b'req_bf4e56ea29464b73df8cc3f5a9fe6e6c'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Bb_QurjdDkcQOLDOCoAuOrDU0yGmPR2JU8p89lr0GP0-1729283117-1.0.1.1-UVnR.6BhrgckRvuM7r29Gtp0bvqiewyiScr66f5fzA0o7PyB1la9mPqO0FhNiJpCYOjXqHZAHnU66l.xN_QyPA; path=/; expires=Fri, 18-Oct-24 20:55:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=ocDPEqXoIVFA5D5wF7BSHJGZ_VV_kMpAPKmqxuihNdo-1729283117590-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b41b658179b1d-EZE'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:25:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'767'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89301'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'466ms'), (b'x-request-id', b'req_bf4e56ea29464b73df8cc3f5a9fe6e6c'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Bb_QurjdDkcQOLDOCoAuOrDU0yGmPR2JU8p89lr0GP0-1729283117-1.0.1.1-UVnR.6BhrgckRvuM7r29Gtp0bvqiewyiScr66f5fzA0o7PyB1la9mPqO0FhNiJpCYOjXqHZAHnU66l.xN_QyPA; path=/; expires=Fri, 18-Oct-24 20:55:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=ocDPEqXoIVFA5D5wF7BSHJGZ_VV_kMpAPKmqxuihNdo-1729283117590-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b41b658179b1d-EZE'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-10-18 17:25:17 INFO: HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-18 17:25:17 DEBUG: receive_response_body.started request=<Request [b'POST']>
+receive_response_body.started request=<Request [b'POST']>
+2024-10-18 17:25:17 DEBUG: receive_response_body.complete
+receive_response_body.complete
+2024-10-18 17:25:17 DEBUG: response_closed.started
+response_closed.started
+2024-10-18 17:25:17 DEBUG: response_closed.complete
+response_closed.complete
+2024-10-18 17:25:17 DEBUG: HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers([('date', 'Fri, 18 Oct 2024 20:25:17 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-allow-origin', '*'), ('access-control-expose-headers', 'X-Request-ID'), ('cache-control', 'no-cache, must-revalidate'), ('openai-model', 'gpt-3.5-turbo-instruct'), ('openai-organization', 'stackcodelab'), ('openai-processing-ms', '767'), ('openai-version', '2020-10-01'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('x-ratelimit-limit-requests', '3500'), ('x-ratelimit-limit-tokens', '90000'), ('x-ratelimit-remaining-requests', '3499'), ('x-ratelimit-remaining-tokens', '89301'), ('x-ratelimit-reset-requests', '17ms'), ('x-ratelimit-reset-tokens', '466ms'), ('x-request-id', 'req_bf4e56ea29464b73df8cc3f5a9fe6e6c'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=Bb_QurjdDkcQOLDOCoAuOrDU0yGmPR2JU8p89lr0GP0-1729283117-1.0.1.1-UVnR.6BhrgckRvuM7r29Gtp0bvqiewyiScr66f5fzA0o7PyB1la9mPqO0FhNiJpCYOjXqHZAHnU66l.xN_QyPA; path=/; expires=Fri, 18-Oct-24 20:55:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=ocDPEqXoIVFA5D5wF7BSHJGZ_VV_kMpAPKmqxuihNdo-1729283117590-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8d4b41b658179b1d-EZE'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers([('date', 'Fri, 18 Oct 2024 20:25:17 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-allow-origin', '*'), ('access-control-expose-headers', 'X-Request-ID'), ('cache-control', 'no-cache, must-revalidate'), ('openai-model', 'gpt-3.5-turbo-instruct'), ('openai-organization', 'stackcodelab'), ('openai-processing-ms', '767'), ('openai-version', '2020-10-01'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('x-ratelimit-limit-requests', '3500'), ('x-ratelimit-limit-tokens', '90000'), ('x-ratelimit-remaining-requests', '3499'), ('x-ratelimit-remaining-tokens', '89301'), ('x-ratelimit-reset-requests', '17ms'), ('x-ratelimit-reset-tokens', '466ms'), ('x-request-id', 'req_bf4e56ea29464b73df8cc3f5a9fe6e6c'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=Bb_QurjdDkcQOLDOCoAuOrDU0yGmPR2JU8p89lr0GP0-1729283117-1.0.1.1-UVnR.6BhrgckRvuM7r29Gtp0bvqiewyiScr66f5fzA0o7PyB1la9mPqO0FhNiJpCYOjXqHZAHnU66l.xN_QyPA; path=/; expires=Fri, 18-Oct-24 20:55:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=ocDPEqXoIVFA5D5wF7BSHJGZ_VV_kMpAPKmqxuihNdo-1729283117590-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8d4b41b658179b1d-EZE'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-10-18 17:25:17 DEBUG: request_id: req_bf4e56ea29464b73df8cc3f5a9fe6e6c
+request_id: req_bf4e56ea29464b73df8cc3f5a9fe6e6c
+2024-10-18 17:25:17 DEBUG: Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:SELECT producto, SUM(cantidad) AS "unidades vendidas" FROM ventas GROUP BY producto LIMIT 5\nSQLResult: [(\'Bolsa de dormir\', 3), (\'Botiquín de primeros auxilios\', 1), (\'Brújula\', 1), (\'Cocina portátil\', 1), (\'Colchoneta inflable\', 1)]\nAnswer:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+Request options: {'method': 'post', 'url': '/completions', 'files': None, 'json_data': {'model': 'gpt-3.5-turbo-instruct', 'prompt': ['You are a SQLite expert. Given an input question, first create a syntactically correct SQLite query to run, then look at the results of the query and return the answer to the input question.\nUnless the user specifies in the question a specific number of examples to obtain, query for at most 5 results using the LIMIT clause as per SQLite. You can order the results to return the most informative data in the database.\nNever query for all columns from a table. You must query only the columns that are needed to answer the question. Wrap each column name in double quotes (") to denote them as delimited identifiers.\nPay attention to use only the column names you can see in the tables below. Be careful to not query for columns that do not exist. Also, pay attention to which column is in which table.\nPay attention to use date(\'now\') function to get the current date, if the question involves "today".\n\nUse the following format:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use the following tables:\n\nCREATE TABLE ventas (\n\tid INTEGER, \n\t"idFactura" INTEGER, \n\t"idProducto" INTEGER, \n\tproducto TEXT, \n\tcantidad INTEGER, \n\tfecha DATE, \n\tprecio REAL, \n\t"idCliente" INTEGER, \n\t"montoTotal" REAL, \n\tPRIMARY KEY (id)\n)\n\n/*\n3 rows from ventas table:\nid\tidFactura\tidProducto\tproducto\tcantidad\tfecha\tprecio\tidCliente\tmontoTotal\n1\t1\t101\tTienda de campaña\t2\t2023-09-10\t99.99\t1\t199.98\n2\t2\t102\tSaco de dormir\t3\t2023-09-11\t49.95\t2\t149.85\n3\t3\t103\tLinterna\t5\t2023-09-12\t19.99\t3\t99.95\n*/\n\nQuestion: Responde a la pregunta \'¿Cuántas unidades de cada producto se han vendido?\' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales.\nSQLQuery:SELECT producto, SUM(cantidad) AS "unidades vendidas" FROM ventas GROUP BY producto LIMIT 5\nSQLResult: [(\'Bolsa de dormir\', 3), (\'Botiquín de primeros auxilios\', 1), (\'Brújula\', 1), (\'Cocina portátil\', 1), (\'Colchoneta inflable\', 1)]\nAnswer:'], 'frequency_penalty': 0, 'logit_bias': {}, 'logprobs': None, 'max_tokens': 256, 'n': 1, 'presence_penalty': 0, 'seed': None, 'stop': ['\nSQLResult:'], 'temperature': 0.0, 'top_p': 1}}
+2024-10-18 17:25:17 DEBUG: Sending HTTP Request: POST https://api.openai.com/v1/completions
+Sending HTTP Request: POST https://api.openai.com/v1/completions
+2024-10-18 17:25:17 DEBUG: send_request_headers.started request=<Request [b'POST']>
+send_request_headers.started request=<Request [b'POST']>
+2024-10-18 17:25:17 DEBUG: send_request_headers.complete
+send_request_headers.complete
+2024-10-18 17:25:17 DEBUG: send_request_body.started request=<Request [b'POST']>
+send_request_body.started request=<Request [b'POST']>
+2024-10-18 17:25:17 DEBUG: send_request_body.complete
+send_request_body.complete
+2024-10-18 17:25:17 DEBUG: receive_response_headers.started request=<Request [b'POST']>
+receive_response_headers.started request=<Request [b'POST']>
+2024-10-18 17:25:18 DEBUG: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:25:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'713'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89239'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'506ms'), (b'x-request-id', b'req_7d01129f8026a128692dfb1332519422'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b41bd29899b1d-EZE'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Oct 2024 20:25:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'Cache-Control', b'no-cache, must-revalidate'), (b'openai-model', b'gpt-3.5-turbo-instruct'), (b'openai-organization', b'stackcodelab'), (b'openai-processing-ms', b'713'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'3500'), (b'x-ratelimit-limit-tokens', b'90000'), (b'x-ratelimit-remaining-requests', b'3499'), (b'x-ratelimit-remaining-tokens', b'89239'), (b'x-ratelimit-reset-requests', b'17ms'), (b'x-ratelimit-reset-tokens', b'506ms'), (b'x-request-id', b'req_7d01129f8026a128692dfb1332519422'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8d4b41bd29899b1d-EZE'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-10-18 17:25:18 INFO: HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-18 17:25:18 DEBUG: receive_response_body.started request=<Request [b'POST']>
+receive_response_body.started request=<Request [b'POST']>
+2024-10-18 17:25:18 DEBUG: receive_response_body.complete
+receive_response_body.complete
+2024-10-18 17:25:18 DEBUG: response_closed.started
+response_closed.started
+2024-10-18 17:25:18 DEBUG: response_closed.complete
+response_closed.complete
+2024-10-18 17:25:18 DEBUG: HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers({'date': 'Fri, 18 Oct 2024 20:25:18 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'cache-control': 'no-cache, must-revalidate', 'openai-model': 'gpt-3.5-turbo-instruct', 'openai-organization': 'stackcodelab', 'openai-processing-ms': '713', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-ratelimit-limit-requests': '3500', 'x-ratelimit-limit-tokens': '90000', 'x-ratelimit-remaining-requests': '3499', 'x-ratelimit-remaining-tokens': '89239', 'x-ratelimit-reset-requests': '17ms', 'x-ratelimit-reset-tokens': '506ms', 'x-request-id': 'req_7d01129f8026a128692dfb1332519422', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8d4b41bd29899b1d-EZE', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+HTTP Response: POST https://api.openai.com/v1/completions "200 OK" Headers({'date': 'Fri, 18 Oct 2024 20:25:18 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'cache-control': 'no-cache, must-revalidate', 'openai-model': 'gpt-3.5-turbo-instruct', 'openai-organization': 'stackcodelab', 'openai-processing-ms': '713', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-ratelimit-limit-requests': '3500', 'x-ratelimit-limit-tokens': '90000', 'x-ratelimit-remaining-requests': '3499', 'x-ratelimit-remaining-tokens': '89239', 'x-ratelimit-reset-requests': '17ms', 'x-ratelimit-reset-tokens': '506ms', 'x-request-id': 'req_7d01129f8026a128692dfb1332519422', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8d4b41bd29899b1d-EZE', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-10-18 17:25:18 DEBUG: request_id: req_7d01129f8026a128692dfb1332519422
+request_id: req_7d01129f8026a128692dfb1332519422
+2024-10-18 17:25:18 DEBUG: Resultado obtenido: Se han vendido 3 unidades de la Bolsa de dormir, 1 unidad del Botiquín de primeros auxilios, 1 unidad de la Brújula, 1 unidad de la Cocina portátil y 1 unidad de la Colchoneta inflable.
+Resultado obtenido: Se han vendido 3 unidades de la Bolsa de dormir, 1 unidad del Botiquín de primeros auxilios, 1 unidad de la Brújula, 1 unidad de la Cocina portátil y 1 unidad de la Colchoneta inflable.
+2024-10-18 17:25:18 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:18] "POST /langchain-db HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:18] "POST /langchain-db HTTP/1.1" 200 -
+2024-10-18 17:25:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:32] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:32] "OPTIONS /chat HTTP/1.1" 200 -
+2024-10-18 17:25:32 INFO: Mensaje del usuario: ¿Cuántas unidades de cada producto se han vendido?
+Mensaje del usuario: ¿Cuántas unidades de cada producto se han vendido?
+2024-10-18 17:25:32 DEBUG: Consulta obtenida desde el caché: ¿Cuántas unidades de cada producto se han vendido?
+Consulta obtenida desde el caché: ¿Cuántas unidades de cada producto se han vendido?
+2024-10-18 17:25:32 INFO: 127.0.0.1 - - [18/Oct/2024 17:25:32] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2024 17:25:32] "POST /chat HTTP/1.1" 200 -
