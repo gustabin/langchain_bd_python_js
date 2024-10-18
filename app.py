@@ -1,4 +1,3 @@
-# Para manejar la aplicación web
 from flask import render_template, Flask, request, jsonify, redirect, url_for, flash
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -10,13 +9,32 @@ from flask_sqlalchemy import SQLAlchemy
 from cryptography.fernet import Fernet
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import RegistrationForm
-from sqlalchemy.exc import OperationalError
+from sqlalchemy import inspect
+from sqlalchemy.exc import OperationalError, TimeoutError
+from logging.handlers import RotatingFileHandler
+import psycopg2
 import os
+import logging
+
+cache = {}
+
+# Configurar el logging
+logging.basicConfig(
+    filename='app_queries.log',  # Nombre del archivo de log
+    level=logging.DEBUG,  # Nivel de logging (DEBUG es útil para desarrollo)
+    format='%(asctime)s %(levelname)s: %(message)s',  # Formato de los mensajes
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+
+handler = RotatingFileHandler('app_queries.log', maxBytes=10**6, backupCount=3)
+logging.getLogger().addHandler(handler)
+
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
-# openai_api_key = os.getenv('OPENAI_API_KEY')
+openai_api_key = os.getenv('OPENAI_API_KEY')
 # Crear una instancia de la aplicación Flask
 app = Flask(__name__)
 
@@ -33,10 +51,17 @@ db = SQLAlchemy(app)
 # print(key.decode())
 
 # Reemplaza esta clave con la que generaste y guardaste
-# SECRET_KEY = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
 # Asegúrate de que esta clave sea secreta y segura
 
-app.config['SECRET_KEY'] = b'3TJMTSurWkYSIK0Bo98K4-BX8XZn2H4KPmouNZeIq7Q='
+# app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
+
+SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
+if not SECRET_KEY:
+    raise RuntimeError(
+        "La clave secreta de Flask ('FLASK_SECRET_KEY') no está configurada en el entorno. "
+        "Por favor, define esta variable de entorno antes de iniciar la aplicación. "
+        "Esto es crítico para la seguridad de las sesiones y la encriptación de datos sensibles."
+    )
 
 
 # Definición del modelo de usuario
@@ -45,21 +70,17 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
-    password = db.Column(db.String(128))  # Contraseña del usuario encriptada
+    password = db.Column(db.String(128))
     website = db.Column(db.String(100), nullable=False)
-    api_key = db.Column(db.String(128), unique=True,
-                        nullable=False)  # Clave de API
-    # Campos para la conexión a la base de datos
+    api_key = db.Column(db.String(128), unique=True, nullable=False)
     hostDB = db.Column(db.String(100), nullable=False)
     userDB = db.Column(db.String(100), nullable=False)
-    # Contraseña encriptada
     passwordDB = db.Column(db.String(100), nullable=True)
     databaseDB = db.Column(db.String(100), nullable=False)
-    db_type = db.Column(db.String(50), nullable=False)
-    port = db.Column(db.Integer, nullable=True)  # Puerto de la base de datos
-    # Si SSL está habilitado
+    db_type = db.Column(db.String(50), nullable=False)  # Tipo de base de datos
+    port = db.Column(db.Integer, nullable=True)
     ssl_enabled = db.Column(db.Boolean, default=False)
-    charset = db.Column(db.String(50), nullable=True)  # Charset de la conexión
+    charset = db.Column(db.String(50), nullable=True)
 
     # Método para encriptar la contraseña de la base de datos
     def set_password_db(self, password):
@@ -98,14 +119,14 @@ CORS(app, resources={r"/chat": {
 
 
 # Configurar el modelo de lenguaje para LangChain
-llm = OpenAI(temperature=0, verbose=True)
-# llm = OpenAI(api_key=openai_api_key, temperature=0, verbose=True)
+# llm = OpenAI(temperature=0, verbose=True)
+llm = OpenAI(api_key=openai_api_key, temperature=0, verbose=True)
 db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri(
     "sqlite:///datasources/inventario.db"), verbose=True)
 
 base_prompt = PromptTemplate(
     input_variables=["query"],
-    template="Responde en español y evita añadir frases innecesarias como 'Final answer here': {query}"
+    template="Responde a la pregunta '{query}' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales."
 )
 
 
@@ -118,44 +139,78 @@ def index():
 #     return render_template('cliente.html')
 
 
+def execute_langchain_query(query):
+    # Verificar si la consulta está en caché
+    if query in cache:
+        logging.debug(f"Consulta obtenida desde el caché: {query}")
+        return cache[query]
+
+    # Modificar la consulta
+    modified_query = base_prompt.format(query=query)
+    logging.debug(f"Consulta modificada para LangChain: {modified_query}")
+
+    # Ejecutar la consulta en LangChain
+    result = db_chain.run(modified_query)
+
+    # Almacenar el resultado en caché
+    cache[query] = result.strip()
+
+    logging.debug(f"Resultado obtenido: {result.strip()}")
+    return result.strip()
+
+
 @app.route('/langchain-db', methods=['POST'])
 def langchain_db():
     data = request.get_json()
     query = data.get('query')
 
+    logging.info(f"Consulta recibida: {query}")
+
     try:
-        modified_query = base_prompt.format(query=query)
-        result = db_chain.run(modified_query)
+        result = execute_langchain_query(query)
         return jsonify({'result': result.strip()}), 200
+
     except OperationalError as e:
-        return jsonify({'error': 'Lo siento, pero solo manejo información relacionada con la base de datos.'}), 400
+        logging.error(f"Error operativo en la base de datos: {e}")
+        return jsonify({'error': 'Error al conectar con la base de datos. Intenta nuevamente.'}), 500
+
+    except TimeoutError as e:
+        logging.error(f"Error de tiempo de espera en la base de datos: {e}")
+        return jsonify({'error': 'La conexión a la base de datos ha expirado. Intenta nuevamente.'}), 503
+
+    except psycopg2.OperationalError as e:
+        logging.error(f"Error específico de PostgreSQL: {e}")
+        return jsonify({'error': 'Error al conectar con PostgreSQL. Intenta nuevamente.'}), 500
+
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        logging.exception(f"Error inesperado: {e}")
+        return jsonify({'error': 'Ocurrió un error inesperado.'}), 500
 
 
 @app.route('/chat', methods=['POST'])
 def chat():
     user_message = request.json.get('message')
 
+    # Registrar el mensaje del usuario
+    logging.info(f"Mensaje del usuario: {user_message}")
+
     try:
-        # Preparar la consulta con LangChain
-        modified_query = base_prompt.format(query=user_message)
-
-        # Obtener la respuesta del modelo
-        result = db_chain.run(modified_query)
-
-        # Retornar tanto la pregunta como la respuesta
+        result = execute_langchain_query(user_message)
         return jsonify({
             "question": user_message,  # Mostrar la pregunta del usuario
             "response": result.strip()  # Mostrar la respuesta del modelo
         })
 
     except OperationalError as e:
+        # Registrar el error de base de datos
+        logging.error(f"Error de base de datos: {e}")
         return jsonify({
             "error": 'Lo siento, pero solo manejo información relacionada con la base de datos.'
         }), 400
 
     except Exception as e:
+        # Registrar cualquier otro error
+        logging.exception(f"Error inesperado: {e}")
         return jsonify({
             "error": str(e)
         }), 500
@@ -168,22 +223,20 @@ def register():
         # Verifica si el email ya está registrado
         if User.query.filter_by(email=form.email.data).first():
             flash('El email ya está registrado. Por favor, usa otro.', 'danger')
-            print('Mensaje flash agregado: El email ya está registrado.')  # Debug
             return render_template('register.html', form=form)
 
-        # Aquí imprimes el valor del campo passwordDB
-        # Imprime el valor recibido
-        print(f"SSL Enabled Value: {form.passwordDB.data}")
-
+        # Crear el nuevo usuario
         new_user = User(
             name=form.name.data,
             email=form.email.data,
+            password=form.password.data,
             website=form.website.data,
+            api_key=form.api_key.data,
             hostDB=form.hostDB.data,
             userDB=form.userDB.data,
+            passwordDB=form.passwordDB.data,
             databaseDB=form.databaseDB.data,
-            db_type=form.db_type.data,
-            # Asignar None si el campo está vacío
+            db_type=form.db_type.data,  # Tipo de base de datos seleccionado
             port=form.port.data if form.port.data else None,
             ssl_enabled=(form.ssl_enabled.data == 'true'),
             charset=form.charset.data
@@ -194,26 +247,52 @@ def register():
 
         # Encripta la contraseña de la base de datos si se proporciona
         if form.passwordDB.data:
-            # Encriptar la contraseña de la base de datos
             new_user.set_password_db(form.passwordDB.data)
 
-         # Generar y asignar la clave de API
+        # Generar la URI de conexión
+        try:
+            connection_uri = generate_database_uri(
+                new_user.db_type,
+                new_user.userDB,
+                new_user.get_password_db(),
+                new_user.hostDB,
+                new_user.port,
+                new_user.databaseDB,
+                new_user.ssl_enabled
+            )
+            print(f"URI de conexión generada: {connection_uri}")
+            # Aquí podrías usar la URI para establecer una conexión o hacer otras verificaciones
+
+        except ValueError as e:
+            flash(f"Error al generar la URI de conexión: {str(e)}", 'danger')
+            return render_template('register.html', form=form)
+
+        # Generar y asignar la clave de API
         new_user.generate_api_key()
 
+        # Guardar el nuevo usuario en la base de datos
         try:
             db.session.add(new_user)
             db.session.commit()
             flash('Usuario registrado exitosamente!', 'success')
-            # Mostrar el script con la clave de API
             flash(f'Por favor, copia y pega este script en tu sitio web: '
                   f'<script src="https://echodb-rlca.onrender.com/static/js/chatbot.js" '
                   f'data-api-key="{new_user.api_key}"></script>', 'info')
-            # Redirige o muestra un mensaje
             return redirect(url_for('register'))
+
+        except IntegrityError as e:
+            db.session.rollback()
+            flash(
+                'Error de integridad de datos al registrar el usuario. Intenta con otros datos.', 'danger')
+            print(f"Error de integridad: {e}")
+        except OperationalError as e:
+            db.session.rollback()
+            flash('Error de conexión a la base de datos al registrar el usuario. Intenta de nuevo más tarde.', 'danger')
+            print(f"Error de conexión: {e}")
         except Exception as e:
-            db.session.rollback()  # Revierte la sesión si ocurre un error
+            db.session.rollback()
             flash('Error al registrar el usuario. Inténtalo de nuevo.', 'danger')
-            print(f'Error: {e}')  # Imprime el error para depuración
+            print(f"Error inesperado: {e}")  # Imprime el error para depuración
 
     return render_template('register.html', form=form)
 
@@ -223,37 +302,97 @@ def validate_api_key():
     data = request.get_json()
     api_key = data.get('api_key')
 
+    # Verifica si la clave API falta
     if not api_key:
-        return jsonify({'error': 'API key is missing'}), 400
+        return jsonify({'error': 'Clave API faltante'}), 400
 
-    user = User.query.filter_by(api_key=api_key).first()
+    # Verifica el formato de la clave API (esto es un ejemplo, ajústalo según tu implementación)
+    # Aquí un ejemplo de longitud para Fernet
+    if not isinstance(api_key, str) or len(api_key) != 44:
+        return jsonify({'error': 'Formato de clave API inválido'}), 400
 
-    if user:
-        # Usuario encontrado, retornar los datos
-        return jsonify({
-            'access': True,
-            'user': {
-                'name': user.name,
-                'email': user.email,
-                'website': user.website,
-                'password': user.password,
-                'hostDB': user.hostDB,
-                'userDB': user.userDB,
-                'passwordDB': user.passwordDB,
-                'databaseDB': user.databaseDB,
-                'db_type': user.db_type,
-                'port': user.port,
-                'ssl_enabled': user.ssl_enabled,
-                'charset': user.charset
-                # Puedes incluir más campos si es necesario
-            }
-        }), 200
+    try:
+        user = User.query.filter_by(api_key=api_key).first()
+
+        if user:
+            return jsonify({
+                'access': True,
+                'user': {
+                    'name': user.name,
+                    'email': user.email,
+                    'password': user.password,
+                    'website': user.website,
+                    'api_key': user.api_key,
+                    'hostDB': user.hostDB,
+                    'userDB': user.userDB,
+                    'passwordDB': user.passwordDB,
+                    'databaseDB': user.databaseDB,
+                    'db_type': user.db_type,
+                    'port': user.port,
+                    'ssl_enabled': user.ssl_enabled,
+                    'charset': user.charset
+                }
+            }), 200
+        else:
+            return jsonify({'access': False, 'message': 'Clave API no encontrada'}), 403
+
+    except Exception as e:
+        logging.exception(f"Error en la validación de la clave API: {e}")
+        return jsonify({'error': 'Ocurrió un error al validar la clave API'}), 500
+
+
+@app.route('/clear-cache', methods=['POST'])
+def clear_cache():
+    global cache
+    cache.clear()  # Limpiar el caché
+    logging.info("Caché limpiado manualmente.")
+    return jsonify({"message": "Caché limpiado exitosamente."}), 200
+
+
+DATABASE_URIS = {
+    'mysql': 'mysql+pymysql://{user}:{password}@{host}{port_part}/{database}',
+    'postgresql': 'postgresql://{user}:{password}@{host}{port_part}/{database}',
+    'sqlserver': 'mssql+pyodbc://{user}:{password}@{host}{port_part}/{database}?driver=SQL+Server',
+    'sqlite': 'sqlite:///{database}',  # SQLite no requiere host ni puerto
+    'oracle': 'oracle+cx_oracle://{user}:{password}@{host}{port_part}/?service_name={database}'
+}
+
+
+def generate_database_uri(db_type, user, password, host, port, database, ssl_enabled):
+    if not user or not password or not host or not database:
+        raise ValueError(
+            "Faltan parámetros críticos para generar la URI de conexión.")
+
+    # Para bases de datos que no requieren puerto, dejamos el campo vacío
+    port_part = f':{port}' if port else ''
+
+    if db_type in DATABASE_URIS:
+        return DATABASE_URIS[db_type].format(
+            user=user,
+            password=password,
+            host=host,
+            port_part=port_part,  # Se añade el puerto solo si existe
+            database=database
+        )
     else:
-        # API key inválido
-        return jsonify({'access': False, 'message': 'No tienes acceso al chatbot.'}), 403
+        raise ValueError(f"Tipo de base de datos '{db_type}' no soportado.")
+
+
+def create_tables_if_not_exist():
+    # Inspecciona la base de datos para verificar si ya existen tablas
+    inspector = inspect(db.engine)
+    tables = inspector.get_table_names()
+
+    if not tables:
+        # Si no hay tablas, las creamos
+        db.create_all()
+        logging.info("Tablas creadas exitosamente.")
+    else:
+        logging.info("Las tablas ya existen, no es necesario crearlas.")
 
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Crear todas las tablas definidas en los modelos
+        # Ejecutar solo una vez al iniciar la aplicación
+        create_tables_if_not_exist()
     app.run(debug=True, port=5010)
