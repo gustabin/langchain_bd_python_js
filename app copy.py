@@ -5,7 +5,7 @@ from logging.handlers import RotatingFileHandler
 import psycopg2
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
-from flask import Flask, flash, jsonify, redirect, render_template, request, url_for, session
+from flask import Flask, flash, jsonify, redirect, render_template, request, url_for
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from langchain.prompts import PromptTemplate
@@ -18,9 +18,49 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from forms import RegistrationForm
 
+cache = {}
+
+logging.basicConfig(
+    filename='app_queries.log',
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s: %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+handler = RotatingFileHandler('app_queries.log', maxBytes=10**6, backupCount=3)
+logging.getLogger().addHandler(handler)
+
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+openai_api_key = os.getenv('OPENAI_API_KEY')
+app = Flask(__name__)
+
+# DATABASE_PATH = os.path.join(
+#     os.path.dirname(__file__), 'datasources/echoDB.db')
+# app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
+# {ssl_part}
+# user = 'root'
+# password = ''
+# host = 'localhost'
+# port_part = ''  # Puedes dejar esto vacío si no usas un puerto personalizado
+# database = 'restaurante'
+
+
+user = 'stackcod_analistadatos'
+password = '1234567890qwerty'
+host = 'stackcodelab.com'
+port_part = ':3306'
+database = 'stackcod_echodb'
+
+# Usar f-string para interpolar las variables dentro de la cadena
+DATABASE_URI = f'mysql+pymysql://{user}:{password}@{host}{port_part}/{database}'
+
+# Configurar la URI en SQLAlchemy
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
 SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
 if not SECRET_KEY:
     raise RuntimeError(
@@ -28,23 +68,6 @@ if not SECRET_KEY:
         "Por favor, define esta variable de entorno antes de iniciar la aplicación. "
         "Esto es crítico para la seguridad de las sesiones y la encriptación de datos sensibles."
     )
-
-DATABASE_PATH = os.path.join(
-    os.path.dirname(__file__), 'datasources/echoDB.db')
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
-
-DATABASE_URIS = {
-    'mysql': 'mysql+pymysql://{user}:{password}@{host}{port_part}/{database}',
-    'postgresql': 'postgresql://{user}:{password}@{host}{port_part}/{database}',
-    'sqlserver': 'mssql+pyodbc://{user}:{password}@{host}{port_part}/{database}?driver=SQL+Server',
-    'sqlite': 'sqlite:///{database}',
-    'oracle': 'oracle+cx_oracle://{user}:{password}@{host}{port_part}/?service_name={database}'
-}
 
 
 class User(db.Model):
@@ -84,56 +107,30 @@ class User(db.Model):
         return f'<User {self.name}>'
 
 
-# Variable global para almacenar DATABASE_URI
-DATABASE_URI = None
-db_chain = None  # Inicializa la variable
+CORS(app, resources={r"/chat": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}, r"/validate-api-key": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
+    "methods": ["POST"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}})
+
+
+llm = OpenAI(api_key=openai_api_key, temperature=0, verbose=True)
+# db_chain = SQLDatabaseChain.from_llm(llm, SQLDatabase.from_uri(
+#     "sqlite:///datasources/inventario.db"), verbose=True)
+
+
+db_chain = SQLDatabaseChain.from_llm(
+    llm, SQLDatabase.from_uri(DATABASE_URI), verbose=True
+)
 
 base_prompt = PromptTemplate(
     input_variables=["query"],
     template="Responde a la pregunta '{query}' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales."
 )
-
-# CORS(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost"}})
-
-# CORS(app, resources={r"/chat": {
-#     "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
-#     "methods": ["GET", "POST", "OPTIONS"],
-#     "allow_headers": ["Content-Type", "Authorization"]
-# }, r"/validate-api-key": {
-#     "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
-#     "methods": ["POST"],
-#     "allow_headers": ["Content-Type", "Authorization"]
-# }})
-
-
-@app.route('/setup-db', methods=['POST'])
-def setup_db():
-    global DATABASE_URI, db_chain  # Declara que vamos a usar las variables globales
-
-    data = request.json
-    # Tipo de base de datos (por ejemplo, 'mysql')
-    typeDB = data.get('typeDB')
-    userDB = data.get('userDB')  # Nombre de usuario de la base de datos
-    passwordDB = data.get('passwordDB')  # Contraseña de la base de datos
-    hostDB = data.get('hostDB')  # Host de la base de datos
-    port = data.get('port', '3306')  # Puerto de la base de datos
-    databaseDB = data.get('databaseDB')  # Nombre de la base de datos
-
-    # Construir la cadena de conexión (URI)
-    port_part = f':{port}' if port else ''
-    DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-
-    llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True)
-    db_chain = SQLDatabaseChain.from_llm(
-        OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True),
-        SQLDatabase.from_uri(DATABASE_URI),
-        verbose=True
-    )
-
-    return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
 
 
 @app.route('/')
@@ -143,6 +140,22 @@ def index():
 # @app.route('/cliente')
 # def cliente():
 #     return render_template('cliente.html')
+
+
+def execute_langchain_query(query):
+    if query in cache:
+        logging.debug("Consulta obtenida desde el caché: %s", query)
+        return cache[query]
+
+    modified_query = base_prompt.format(query=query)
+    logging.debug("Consulta modificada para LangChain: %s", modified_query)
+
+    result = db_chain.run(modified_query)
+
+    cache[query] = result.strip()
+
+    logging.debug("Resultado obtenido: %s", result.strip())
+    return result.strip()
 
 
 @app.route('/langchain-db', methods=['POST'])
@@ -176,6 +189,7 @@ def langchain_db():
 @app.route('/chat', methods=['POST'])
 def chat():
     user_message = request.json.get('message')
+
     logging.info("Mensaje del usuario: %s", user_message)
 
     try:
@@ -272,8 +286,8 @@ def register():
     return render_template('register.html', form=form)
 
 
-# @app.route('/validate-api-key', methods=['POST'])
-# def validate_api_key():
+@app.route('/validate-api-key', methods=['POST'])
+def validate_api_key():
     data = request.get_json()
     api_key = data.get('api_key')
 
@@ -287,36 +301,23 @@ def register():
         user = User.query.filter_by(api_key=api_key).first()
 
         if user:
-            # Obtener la contraseña de la base de datos desencriptada
-            # password = user.get_password_db()
-
-            # Construir la URI de conexión a la base de datos
-            port_part = f':{user.port}' if user.port else ''
-            DATABASE_URI = f'{user.db_type}://{user.userDB}:{user.passwordDB}@{user.hostDB}{port_part}/{user.databaseDB}'
-
-            # # Configurar la URI en SQLAlchemy
-            app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-
-            # Puedes confirmar que se configuró correctamente (opcional)
-            logging.info(f"URI de base de datos configurada: {DATABASE_URI}")
-
             return jsonify({
                 'access': True,
                 'user': {
                     'name': user.name,
-                    # 'email': user.email,
-                    # 'password': user.password,
-                    # 'website': user.website,
-                    # 'api_key': user.api_key,
-                    # 'hostDB': user.hostDB,
-                    # 'userDB': user.userDB,
-                    # 'passwordDB': user.passwordDB,
-                    # 'databaseDB': user.databaseDB,
-                    # 'db_type': user.db_type,
-                    # 'port': user.port,
-                    # 'ssl_enabled': user.ssl_enabled,
-                    # 'charset': user.charset
-                },
+                    'email': user.email,
+                    'password': user.password,
+                    'website': user.website,
+                    'api_key': user.api_key,
+                    'hostDB': user.hostDB,
+                    'userDB': user.userDB,
+                    'passwordDB': user.passwordDB,
+                    'databaseDB': user.databaseDB,
+                    'db_type': user.db_type,
+                    'port': user.port,
+                    'ssl_enabled': user.ssl_enabled,
+                    'charset': user.charset
+                }
             }), 200
         else:
             return jsonify({'access': False, 'message': 'Clave API no encontrada'}), 403
@@ -326,14 +327,21 @@ def register():
         return jsonify({'error': 'Ocurrió un error al validar la clave API'}), 500
 
 
-def execute_langchain_query(query):
-    modified_query = base_prompt.format(query=query)
-    logging.debug("Consulta modificada para LangChain: %s", modified_query)
+@app.route('/clear-cache', methods=['POST'])
+def clear_cache():
+    global cache
+    cache.clear()
+    logging.info("Caché limpiado manualmente.")
+    return jsonify({"message": "Caché limpiado exitosamente."}), 200
 
-    result = db_chain.run(modified_query)
 
-    logging.debug("Resultado obtenido: %s", result.strip())
-    return result.strip()
+DATABASE_URIS = {
+    'mysql': 'mysql+pymysql://{user}:{password}@{host}{port_part}/{database}',
+    'postgresql': 'postgresql://{user}:{password}@{host}{port_part}/{database}',
+    'sqlserver': 'mssql+pyodbc://{user}:{password}@{host}{port_part}/{database}?driver=SQL+Server',
+    'sqlite': 'sqlite:///{database}',
+    'oracle': 'oracle+cx_oracle://{user}:{password}@{host}{port_part}/?service_name={database}'
+}
 
 
 def generate_database_uri(db_type, user, password, host, port, database, ssl_enabled):
