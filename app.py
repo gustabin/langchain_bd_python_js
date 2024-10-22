@@ -1,22 +1,36 @@
+# 1. Librerías estándar de Python
 import logging
 import os
-from logging.handlers import RotatingFileHandler
+import subprocess
 
+# 2. Librerías externas
+import pyodbc
 import psycopg2
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
 from flask import Flask, flash, jsonify, redirect, render_template, request, url_for, session
-from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
-from langchain.prompts import PromptTemplate
-from langchain_community.utilities import SQLDatabase
-from langchain_experimental.sql import SQLDatabaseChain
-from langchain_openai import OpenAI
-from sqlalchemy import inspect
-from sqlalchemy.exc import IntegrityError, OperationalError
+from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# 3. Librerías de manejo de base de datos y errores
+from sqlalchemy.exc import IntegrityError, OperationalError
+from sqlalchemy import inspect
+
+# 4. Librerías de terceros para Langchain
+from langchain_openai import OpenAI
+from langchain_experimental.sql import SQLDatabaseChain
+from langchain_community.utilities import SQLDatabase
+from langchain.prompts import PromptTemplate
+
+# 5. Formularios personalizados
 from forms import RegistrationForm
+
+# 6. Otros
+from logging.handlers import RotatingFileHandler
+
+from textoDb import DocumentLangchain
+
 
 load_dotenv()
 
@@ -33,6 +47,9 @@ DATABASE_PATH = os.path.join(
     os.path.dirname(__file__), 'datasources/echoDB.db')
 
 app = Flask(__name__)
+# Establece una clave secreta para las sesiones
+# Cambia esto por una clave segura
+# app.secret_key = 'una_clave_secreta_super_segura'
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -86,12 +103,14 @@ class User(db.Model):
 
 # Variable global para almacenar DATABASE_URI
 DATABASE_URI = None
+CONTENIDO_TEXTO = None
 db_chain = None  # Inicializa la variable
 
 base_prompt = PromptTemplate(
     input_variables=["query"],
     template="Responde a la pregunta '{query}' de forma clara y concisa, proporcionando solo la información solicitada. Evita detalles técnicos y explicaciones adicionales."
 )
+
 
 # CORS(app)
 CORS(app, resources={r"/*": {"origins": "http://localhost"}})
@@ -109,7 +128,8 @@ CORS(app, resources={r"/*": {"origins": "http://localhost"}})
 
 @app.route('/setup-db', methods=['POST'])
 def setup_db():
-    global DATABASE_URI, db_chain  # Declara que vamos a usar las variables globales
+    # Declara que vamos a usar las variables globales
+    global DATABASE_URI, db_chain, CONTENIDO_TEXTO
 
     data = request.json
     # Tipo de base de datos (por ejemplo, 'mysql')
@@ -122,18 +142,100 @@ def setup_db():
 
     # Construir la cadena de conexión (URI)
     port_part = f':{port}' if port else ''
-    DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+
+    if typeDB.lower() == 'mysql':
+        DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+    elif typeDB.lower() == 'postgresql':
+        DATABASE_URI = f'postgresql://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+    elif typeDB.lower() == 'sqlite':
+        DATABASE_URI = f'sqlite:///{databaseDB}'
+    elif typeDB.lower() == 'texto':
+        DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
+        CONTENIDO_TEXTO = True
+    elif typeDB.lower() == 'sqlserver':
+        # No furula
+        DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
+
+    elif typeDB.lower() == 'oracle':
+        # No la he probado
+        DATABASE_URI = f'oracle+cx_oracle://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+    else:
+        raise ValueError("Tipo de base de datos no soportado")
 
     app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 
-    llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True)
+    llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0,
+                 verbose=True, model_name='gpt-3.5-turbo')
     db_chain = SQLDatabaseChain.from_llm(
         OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True),
         SQLDatabase.from_uri(DATABASE_URI),
         verbose=True
     )
-
+    print(f'Conexión configurada con éxito DATABASE_URI', {
+          DATABASE_URI}, ' contenido texto: ', {CONTENIDO_TEXTO})
     return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
+
+
+def execute_langchain_query(query):
+    if (CONTENIDO_TEXTO):
+        from langchain_community.vectorstores import FAISS
+        from langchain.chains import RetrievalQA
+        from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+        from sqlalchemy import create_engine
+        from sqlalchemy.orm import sessionmaker, declarative_base
+        from sqlalchemy import Column, Integer, String
+
+        # Configuración de la base de datos
+        # DATABASE_URL = f'mysql://root:@localhost:3306/echoDB'
+        DATABASE_URL = DATABASE_URI
+        Base = declarative_base()
+
+        # Definición del modelo
+        class Document(Base):
+            __tablename__ = 'user'  # Nombre de tu tabla
+            id = Column(Integer, primary_key=True)
+            contenido = Column(String)
+
+        # Crear motor y sesión
+        engine = create_engine(DATABASE_URL)
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        # Cargar documentos desde la base de datos
+        def load_documents():
+            documents = session.query(Document).all()
+            return [DocumentLangchain(doc.contenido, metadata={"id": doc.id}) for doc in documents]
+
+        # Crear un índice de los documentos
+        def create_index(documents):
+            embeddings = OpenAIEmbeddings()
+            vectorstore = FAISS.from_documents(documents, embeddings)
+            return vectorstore
+
+        # Crear el chatbot
+        def create_chatbot():
+            documents = load_documents()
+            vectorstore = create_index(documents)
+            qa = RetrievalQA.from_chain_type(
+                llm=ChatOpenAI(temperature=0),
+                chain_type="stuff",
+                retriever=vectorstore.as_retriever()
+            )
+            return qa
+
+        # Ejecutar la lógica del chatbot con documentos
+        chatbot = create_chatbot()
+        result = chatbot.invoke({"query": query})
+        return result.get('result', '').strip()
+
+    else:
+        modified_query = base_prompt.format(query=query)
+        logging.debug("Consulta modificada para LangChain: %s", modified_query)
+
+        result = db_chain.run(modified_query)
+        logging.debug("Resultado obtenido: %s", result.strip())
+
+    return result.strip()
 
 
 @app.route('/')
@@ -270,70 +372,6 @@ def register():
             print(f"Error inesperado: {e}")
 
     return render_template('register.html', form=form)
-
-
-# @app.route('/validate-api-key', methods=['POST'])
-# def validate_api_key():
-    data = request.get_json()
-    api_key = data.get('api_key')
-
-    if not api_key:
-        return jsonify({'error': 'Clave API faltante'}), 400
-
-    if not isinstance(api_key, str) or len(api_key) != 44:
-        return jsonify({'error': 'Formato de clave API inválido'}), 400
-
-    try:
-        user = User.query.filter_by(api_key=api_key).first()
-
-        if user:
-            # Obtener la contraseña de la base de datos desencriptada
-            # password = user.get_password_db()
-
-            # Construir la URI de conexión a la base de datos
-            port_part = f':{user.port}' if user.port else ''
-            DATABASE_URI = f'{user.db_type}://{user.userDB}:{user.passwordDB}@{user.hostDB}{port_part}/{user.databaseDB}'
-
-            # # Configurar la URI en SQLAlchemy
-            app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-
-            # Puedes confirmar que se configuró correctamente (opcional)
-            logging.info(f"URI de base de datos configurada: {DATABASE_URI}")
-
-            return jsonify({
-                'access': True,
-                'user': {
-                    'name': user.name,
-                    # 'email': user.email,
-                    # 'password': user.password,
-                    # 'website': user.website,
-                    # 'api_key': user.api_key,
-                    # 'hostDB': user.hostDB,
-                    # 'userDB': user.userDB,
-                    # 'passwordDB': user.passwordDB,
-                    # 'databaseDB': user.databaseDB,
-                    # 'db_type': user.db_type,
-                    # 'port': user.port,
-                    # 'ssl_enabled': user.ssl_enabled,
-                    # 'charset': user.charset
-                },
-            }), 200
-        else:
-            return jsonify({'access': False, 'message': 'Clave API no encontrada'}), 403
-
-    except Exception as e:
-        logging.error(f"Error en la validación de la clave API: {e}")
-        return jsonify({'error': 'Ocurrió un error al validar la clave API'}), 500
-
-
-def execute_langchain_query(query):
-    modified_query = base_prompt.format(query=query)
-    logging.debug("Consulta modificada para LangChain: %s", modified_query)
-
-    result = db_chain.run(modified_query)
-
-    logging.debug("Resultado obtenido: %s", result.strip())
-    return result.strip()
 
 
 def generate_database_uri(db_type, user, password, host, port, database, ssl_enabled):
