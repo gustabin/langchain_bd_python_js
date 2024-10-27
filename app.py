@@ -47,6 +47,8 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
+CONEXION_ECHODB = os.getenv('CONEXION_ECHODB')
+
 if not SECRET_KEY:
     raise RuntimeError(
         "La clave secreta de Flask ('FLASK_SECRET_KEY') no está configurada en el entorno. "
@@ -160,7 +162,8 @@ def setup_db():
         elif typeDB.lower() == 'sqlite':
             DATABASE_URI = f'sqlite:///{databaseDB}'
         elif typeDB.lower() == 'texto':
-            DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
+            # DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
+            DATABASE_URI = f'{CONEXION_ECHODB}'
             CONTENIDO_TEXTO = True
         elif typeDB.lower() == 'sqlserver':
             # No furula
