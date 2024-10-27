@@ -113,17 +113,21 @@ base_prompt = PromptTemplate(
 
 
 # CORS(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost"}})
+# CORS(app, resources={r"/*": {"origins": "http://localhost"}})
 
-# CORS(app, resources={r"/chat": {
-#     "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
-#     "methods": ["GET", "POST", "OPTIONS"],
-#     "allow_headers": ["Content-Type", "Authorization"]
-# }, r"/validate-api-key": {
-#     "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010"],
-#     "methods": ["POST"],
-#     "allow_headers": ["Content-Type", "Authorization"]
-# }})
+CORS(app, resources={r"/chat": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}, r"/validate-api-key": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1"],
+    "methods": ["POST"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}, r"/setup-db": {
+    "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1"],
+    "methods": ["POST"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}})
 
 
 @app.route('/setup-db', methods=['POST'])
