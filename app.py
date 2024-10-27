@@ -167,7 +167,7 @@ def setup_db():
         elif typeDB.lower() == 'sqlite':
             DATABASE_URI = f'sqlite:///{databaseDB}'
         elif typeDB.lower() == 'texto':
-            DATABASE_URI = f'{CONEXION_ECHODB}'
+            DATABASE_URI = f'{typeDB}://{CONEXION_ECHODB}'
             CONTENIDO_TEXTO = True
         elif typeDB.lower() == 'sqlserver':
             DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
