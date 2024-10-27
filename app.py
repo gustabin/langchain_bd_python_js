@@ -144,7 +144,12 @@ def setup_db():
     global DATABASE_URI, db_chain, CONTENIDO_TEXTO
 
     data = request.json
+    
+    # Verificar que 'typeDB' esté en el JSON y no sea None
     typeDB = data.get('typeDB')
+    if not typeDB:
+        return jsonify({'error': 'Falta el campo typeDB en la solicitud.'}), 400
+
     userDB = data.get('userDB')  # Nombre de usuario de la base de datos
     passwordDB = data.get('passwordDB')  # Contraseña de la base de datos
     hostDB = data.get('hostDB')  # Host de la base de datos
@@ -162,14 +167,11 @@ def setup_db():
         elif typeDB.lower() == 'sqlite':
             DATABASE_URI = f'sqlite:///{databaseDB}'
         elif typeDB.lower() == 'texto':
-            # DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
             DATABASE_URI = f'{CONEXION_ECHODB}'
             CONTENIDO_TEXTO = True
         elif typeDB.lower() == 'sqlserver':
-            # No furula
             DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
         elif typeDB.lower() == 'oracle':
-            # No la he probado
             DATABASE_URI = f'oracle+cx_oracle://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
         else:
             raise ValueError("Tipo de base de datos no soportado")
@@ -192,6 +194,7 @@ def setup_db():
         return jsonify({
             'error': f'Error al configurar la conexión: {str(e)}'
         }), 500
+
 
 
 def execute_langchain_query(query):
