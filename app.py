@@ -145,48 +145,63 @@ def setup_db():
 
     data = request.json
     
-    # Verificar que 'typeDB' esté en el JSON y no sea None
+    # Verificar que los campos obligatorios estén presentes
     typeDB = data.get('typeDB')
-    if not typeDB:
-        return jsonify({'error': 'Falta el campo typeDB en la solicitud.'}), 400
+    userDB = data.get('userDB')
+    passwordDB = data.get('passwordDB')
+    hostDB = data.get('hostDB')
+    port = data.get('port', '3306')  # Puerto predeterminado
+    databaseDB = data.get('databaseDB')
 
-    userDB = data.get('userDB')  # Nombre de usuario de la base de datos
-    passwordDB = data.get('passwordDB')  # Contraseña de la base de datos
-    hostDB = data.get('hostDB')  # Host de la base de datos
-    port = data.get('port', '3306')  # Puerto de la base de datos
-    databaseDB = data.get('databaseDB')  # Nombre de la base de datos
+    # Verificar si typeDB es válido antes de intentar usarlo
+    if not typeDB:
+        return jsonify({'error': 'El campo typeDB es requerido'}), 400
 
     # Construir la cadena de conexión (URI)
     port_part = f':{port}' if port else ''
 
     try:
         if typeDB.lower() == 'mysql':
-            DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+            if not (userDB and hostDB and databaseDB):
+                raise ValueError("Faltan campos necesarios para la conexión MySQL")
+            DATABASE_URI = f'mysql://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
         elif typeDB.lower() == 'postgresql':
+            if not (userDB and hostDB and databaseDB):
+                raise ValueError("Faltan campos necesarios para la conexión PostgreSQL")
             DATABASE_URI = f'postgresql://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
         elif typeDB.lower() == 'sqlite':
+            if not databaseDB:
+                raise ValueError("El campo databaseDB es necesario para SQLite")
             DATABASE_URI = f'sqlite:///{databaseDB}'
         elif typeDB.lower() == 'texto':
+            # Asegurarse de que CONEXION_ECHODB esté definido
+            if 'CONEXION_ECHODB' not in globals():
+                raise ValueError("CONEXION_ECHODB no está definido para el tipo de base de datos 'texto'")
             DATABASE_URI = f'mysql://{CONEXION_ECHODB}'
             CONTENIDO_TEXTO = True
         elif typeDB.lower() == 'sqlserver':
+            if not (userDB and hostDB and databaseDB):
+                raise ValueError("Faltan campos necesarios para la conexión SQL Server")
             DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
         elif typeDB.lower() == 'oracle':
+            if not (userDB and hostDB and databaseDB):
+                raise ValueError("Faltan campos necesarios para la conexión Oracle")
             DATABASE_URI = f'oracle+cx_oracle://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
         else:
             raise ValueError("Tipo de base de datos no soportado")
 
+        # Configurar la conexión
         app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 
-        llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0,
-                     verbose=True, model_name='gpt-3.5-turbo')
+        # Inicializar la conexión a la base de datos
+        llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True, model_name='gpt-3.5-turbo')
         db_chain = SQLDatabaseChain.from_llm(
             OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True),
             SQLDatabase.from_uri(DATABASE_URI),
             verbose=True
         )
-        print(f'Conexión configurada con éxito DATABASE_URI', {
-            DATABASE_URI}, ' contenido texto: ', {CONTENIDO_TEXTO})
+        
+        print(f'Conexión configurada con éxito. DATABASE_URI: {DATABASE_URI}, CONTENIDO_TEXTO: {CONTENIDO_TEXTO}')
         return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
 
     except Exception as e:
@@ -194,6 +209,7 @@ def setup_db():
         return jsonify({
             'error': f'Error al configurar la conexión: {str(e)}'
         }), 500
+
 
 
 
