@@ -159,7 +159,7 @@ def setup_db():
 
     # Construir la cadena de conexión (URI)
     port_part = f':{port}' if port else ''
-    print(f'typeDB: {typeDB}')
+    print(f'typeDB: {typeDB} CONEXION_ECHODB: {CONEXION_ECHODB}')
     try:
         if typeDB.lower() == 'mysql':
             if not (userDB and hostDB and databaseDB):
@@ -178,6 +178,7 @@ def setup_db():
             if 'CONEXION_ECHODB' not in globals():
                 raise ValueError("CONEXION_ECHODB no está definido para el tipo de base de datos 'texto'")
             DATABASE_URI = f'mysql://{CONEXION_ECHODB}'
+            print(f'DATABASE_URI: {DATABASE_URI}')
             CONTENIDO_TEXTO = True
         elif typeDB.lower() == 'sqlserver':
             if not (userDB and hostDB and databaseDB):
