@@ -159,7 +159,7 @@ def setup_db():
 
     # Construir la cadena de conexión (URI)
     port_part = f':{port}' if port else ''
-
+    print(f'typeDB: {typeDB}')
     try:
         if typeDB.lower() == 'mysql':
             if not (userDB and hostDB and databaseDB):
