@@ -2,6 +2,7 @@
 import logging
 import os
 import subprocess
+import hashlib
 
 # 2. Librerías externas
 import pyodbc
@@ -29,7 +30,17 @@ from forms import RegistrationForm
 # 6. Otros
 from logging.handlers import RotatingFileHandler
 
-from textoDb import DocumentLangchain
+# Definición de la clase DocumentLangchain
+
+
+class DocumentLangchain:
+    def __init__(self, page_content, metadata=None):
+        self.page_content = page_content
+        self.metadata = metadata or {}
+        self.id = str(self.metadata.get("id", hash(self.page_content)))
+
+    def __str__(self):
+        return f"DocumentLangchain(id={self.id}, content={self.page_content[:50]}...)"
 
 
 load_dotenv()
@@ -47,12 +58,8 @@ DATABASE_PATH = os.path.join(
     os.path.dirname(__file__), 'datasources/echoDB.db')
 
 app = Flask(__name__)
-# Establece una clave secreta para las sesiones
-# Cambia esto por una clave segura
-# app.secret_key = 'una_clave_secreta_super_segura'
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
 
 DATABASE_URIS = {
@@ -132,11 +139,9 @@ CORS(app, resources={r"/chat": {
 
 @app.route('/setup-db', methods=['POST'])
 def setup_db():
-    # Declara que vamos a usar las variables globales
     global DATABASE_URI, db_chain, CONTENIDO_TEXTO
 
     data = request.json
-    # Tipo de base de datos (por ejemplo, 'mysql')
     typeDB = data.get('typeDB')
     userDB = data.get('userDB')  # Nombre de usuario de la base de datos
     passwordDB = data.get('passwordDB')  # Contraseña de la base de datos
@@ -147,37 +152,43 @@ def setup_db():
     # Construir la cadena de conexión (URI)
     port_part = f':{port}' if port else ''
 
-    if typeDB.lower() == 'mysql':
-        DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
-    elif typeDB.lower() == 'postgresql':
-        DATABASE_URI = f'postgresql://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
-    elif typeDB.lower() == 'sqlite':
-        DATABASE_URI = f'sqlite:///{databaseDB}'
-    elif typeDB.lower() == 'texto':
-        DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
-        CONTENIDO_TEXTO = True
-    elif typeDB.lower() == 'sqlserver':
-        # No furula
-        DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
+    try:
+        if typeDB.lower() == 'mysql':
+            DATABASE_URI = f'{typeDB}://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+        elif typeDB.lower() == 'postgresql':
+            DATABASE_URI = f'postgresql://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+        elif typeDB.lower() == 'sqlite':
+            DATABASE_URI = f'sqlite:///{databaseDB}'
+        elif typeDB.lower() == 'texto':
+            DATABASE_URI = f'mysql://root:@localhost:3306/echodb'
+            CONTENIDO_TEXTO = True
+        elif typeDB.lower() == 'sqlserver':
+            # No furula
+            DATABASE_URI = f'mssql+pyodbc://{userDB}:{passwordDB}@{hostDB}/{databaseDB}?driver=ODBC+Driver+17+for+SQL+Server'
+        elif typeDB.lower() == 'oracle':
+            # No la he probado
+            DATABASE_URI = f'oracle+cx_oracle://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
+        else:
+            raise ValueError("Tipo de base de datos no soportado")
 
-    elif typeDB.lower() == 'oracle':
-        # No la he probado
-        DATABASE_URI = f'oracle+cx_oracle://{userDB}:{passwordDB}@{hostDB}{port_part}/{databaseDB}'
-    else:
-        raise ValueError("Tipo de base de datos no soportado")
+        app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+        llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0,
+                     verbose=True, model_name='gpt-3.5-turbo')
+        db_chain = SQLDatabaseChain.from_llm(
+            OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True),
+            SQLDatabase.from_uri(DATABASE_URI),
+            verbose=True
+        )
+        print(f'Conexión configurada con éxito DATABASE_URI', {
+            DATABASE_URI}, ' contenido texto: ', {CONTENIDO_TEXTO})
+        return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
 
-    llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0,
-                 verbose=True, model_name='gpt-3.5-turbo')
-    db_chain = SQLDatabaseChain.from_llm(
-        OpenAI(api_key=OPENAI_API_KEY, temperature=0, verbose=True),
-        SQLDatabase.from_uri(DATABASE_URI),
-        verbose=True
-    )
-    print(f'Conexión configurada con éxito DATABASE_URI', {
-          DATABASE_URI}, ' contenido texto: ', {CONTENIDO_TEXTO})
-    return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
+    except Exception as e:
+        logging.error(f"Error en setup_db: {str(e)}")
+        return jsonify({
+            'error': f'Error al configurar la conexión: {str(e)}'
+        }), 500
 
 
 def execute_langchain_query(query):
@@ -185,18 +196,18 @@ def execute_langchain_query(query):
         from langchain_community.vectorstores import FAISS
         from langchain.chains import RetrievalQA
         from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+        from langchain_core.documents import Document as LangchainDocument
         from sqlalchemy import create_engine
         from sqlalchemy.orm import sessionmaker, declarative_base
         from sqlalchemy import Column, Integer, String
 
         # Configuración de la base de datos
-        # DATABASE_URL = f'mysql://root:@localhost:3306/echoDB'
         DATABASE_URL = DATABASE_URI
         Base = declarative_base()
 
         # Definición del modelo
         class Document(Base):
-            __tablename__ = 'user'  # Nombre de tu tabla
+            __tablename__ = 'user'
             id = Column(Integer, primary_key=True)
             contenido = Column(String)
 
@@ -208,20 +219,33 @@ def execute_langchain_query(query):
         # Cargar documentos desde la base de datos
         def load_documents():
             documents = session.query(Document).all()
-            return [DocumentLangchain(doc.contenido, metadata={"id": doc.id}) for doc in documents]
-
-        # Crear un índice de los documentos
-        def create_index(documents):
-            embeddings = OpenAIEmbeddings()
-            vectorstore = FAISS.from_documents(documents, embeddings)
-            return vectorstore
+            return [
+                LangchainDocument(
+                    page_content=doc.contenido,
+                    metadata={"source": f"doc_{doc.id}", "id": str(doc.id)}
+                )
+                for doc in documents
+            ]
 
         # Crear el chatbot
         def create_chatbot():
             documents = load_documents()
-            vectorstore = create_index(documents)
+            embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+
+            # Extraer textos y metadatos
+            texts = [doc.page_content for doc in documents]
+            metadatas = [doc.metadata for doc in documents]
+
+            # Crear el índice FAISS
+            vectorstore = FAISS.from_texts(
+                texts=texts,
+                embedding=embeddings,
+                metadatas=metadatas
+            )
+
+            # Crear el chatbot
             qa = RetrievalQA.from_chain_type(
-                llm=ChatOpenAI(temperature=0),
+                llm=ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY),
                 chain_type="stuff",
                 retriever=vectorstore.as_retriever()
             )
@@ -233,13 +257,18 @@ def execute_langchain_query(query):
         return result.get('result', '').strip()
 
     else:
+        if not db_chain:
+            initialize_db_chain()
+
+        if not db_chain:
+            raise ValueError(
+                "No se pudo inicializar la conexión con la base de datos")
+
         modified_query = base_prompt.format(query=query)
         logging.debug("Consulta modificada para LangChain: %s", modified_query)
-
         result = db_chain.run(modified_query)
         logging.debug("Resultado obtenido: %s", result.strip())
-
-    return result.strip()
+        return result.strip()
 
 
 @app.route('/')
