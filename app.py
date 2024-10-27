@@ -206,9 +206,9 @@ def setup_db():
         return jsonify({'message': 'Conexión configurada con éxito', 'DATABASE_URI': DATABASE_URI})
 
     except Exception as e:
-        logging.error(f"Error en setup_db: {str(e)}")
+        logging.error(f"xxxx Error en setup_db: {str(e)}")
         return jsonify({
-            'error': f'Error al configurar la conexión: {str(e)}'
+            'error': f'zzzz Error al configurar la conexión: {str(e)}'
         }), 500
 
 
@@ -280,9 +280,7 @@ def execute_langchain_query(query):
         return result.get('result', '').strip()
 
     else:
-        if not db_chain:
-            initialize_db_chain()
-
+        
         if not db_chain:
             raise ValueError(
                 "No se pudo inicializar la conexión con la base de datos")
