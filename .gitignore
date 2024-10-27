@@ -7,3 +7,5 @@ env/
 
 # Ignorar la documentacion
 doc/
+node_modules
+
