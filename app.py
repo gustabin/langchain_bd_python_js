@@ -121,32 +121,31 @@ base_prompt = PromptTemplate(
 )
 
 
-# CORS(app)
+CORS(app)
 # CORS(app, resources={r"/*": {"origins": "http://localhost"}})
 
-CORS(app, resources={
-    r"/chat": {
-        "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com"],
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    },
-    r"/validate-api-key": {
-        "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com"],
-        "methods": ["POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    },
-    r"/setup-db": {
-        "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com"],
-        "methods": ["POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    }
-})
+# CORS(app, resources={
+#     r"/chat": {
+#         "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com", "http://localhost", "http://localhost:5010"],
+#         "methods": ["GET", "POST", "OPTIONS"],
+#         "allow_headers": ["Content-Type", "Authorization"]
+#     },
+#     r"/validate-api-key": {
+#         "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com", "http://localhost", "http://localhost:5010"],
+#         "methods": ["POST", "OPTIONS"],
+#         "allow_headers": ["Content-Type", "Authorization"]
+#     },
+#     r"/setup-db": {
+#         "origins": ["https://stackcodelab.com", "http://127.0.0.1:5010", "http://127.0.0.1", "https://echodb-rlca.onrender.com", "http://localhost", "http://localhost:5010"],
+#         "methods": ["POST", "OPTIONS"],
+#         "allow_headers": ["Content-Type", "Authorization"]
+#     }
+# })
 
 
-@app.route('/setup-db', methods=['POST', 'OPTIONS'])
+@app.route('/setup-db', methods=['POST'])
 def setup_db():
-    if request.method == 'OPTIONS':
-        return '', 200  # Manejo de preflight request
+    
     
     global DATABASE_URI, db_chain, CONTENIDO_TEXTO
 
